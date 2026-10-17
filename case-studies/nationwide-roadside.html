@@ -84,6 +84,7 @@
           <span class="section-label">Overview</span>
           <h2>It started with an app store review I couldn't put down</h2>
           <p>During onboarding in December 2021, I came across a review from a customer who had requested roadside help through our app on a night when it was −8°F. He was told the driver had arrived. Nobody came. A text said he'd wait 133 minutes. He was a Black man stranded on a Minnesota roadside at night, and asking strangers for help carried real risk. It was the second time this had happened to him.</p>
+          <p>He could have frozen, been poisoned by carbon monoxide, or been hit by another vehicle, all because he stayed with his disabled car believing help was coming.</p>
           <p>The tow itself wasn't the failure. The failure was that we left a customer guessing, on the side of the road, in a situation that was dangerous in more ways than one. Every minute of silence extended his exposure: to the cold, and to how a roadside encounter could go. I turned that review into a proposal, socialized it with product and senior leadership, and then owned the redesign end to end. It became the first feature built on Nationwide's new design system.</p>
         </div>
       </div>
@@ -145,7 +146,8 @@
         <div class="read reveal">
           <span class="section-label">01 · Discover</span>
           <h2>One angry review isn't a business case. Session replays are.</h2>
-          <p>With our product analyst, I pulled session replays in UXCam and reconstructed that customer's actual sessions. Then we searched for the same failure signature across other users.</p>
+          <p>First, I requested a tow in our own app to confirm it worked as designed. It did. The breakdown was downstream: our dispatch partner had told us about its new API back in September, and it was still sitting in our backlog.</p>
+          <p>Then, with our product analyst, I pulled session replays in UXCam and reconstructed that customer's actual sessions. Then we searched for the same failure signature across other users.</p>
           <p>It had happened to him twice. It wasn't a fluke but a repeatable failure with a traceable cause. That turned an angry review into a prioritizable defect with a ticket number. We brought the replays, not the anecdote, to the product team.</p>
           <p>Discovery surfaced two more insights. Nearly half of customers were returning to the Nationwide app after requesting help, trying to track it. And many worried that filing a roadside request would raise their rates, the way a claim might.</p>
         </div>
@@ -186,7 +188,7 @@
         </div>
         <div class="flow reveal">
           <div><span class="tag">Observed</span><p>Returning customers tapped the same button they'd used the first time, expecting a status update, not a new request.</p></div>
-          <div><span class="tag">Consequence</span><p>More than half unintentionally started a duplicate request. Almost all abandoned it by the third screen.</p></div>
+          <div><span class="tag">Consequence</span><p>More than half unintentionally started a duplicate request. 96% of those duplicate requests were abandoned by the third screen.</p></div>
           <div><span class="tag">Decision</span><p>While a request is open, replace the button with a live ETA countdown. It reverts when the job closes.</p></div>
           <div><span class="tag">Result</span><p>About half now tap into the tracker, and duplicate requests stopped.</p></div>
         </div>
@@ -242,6 +244,8 @@
           <h2>What I'd do differently, and what I'm still arguing with myself about</h2>
           <h3>A tradeoff I made</h3>
           <p>My original interactions relied on a bottom drawer pattern, which a senior designer pushed back on in review. I defended it as appropriate under Material Design's documented guidance. But in the interest of shipping, conceding a component preference was the right call.</p>
+          <h3>An idea from the research</h3>
+          <p>The Texas story suggested a cheaper, faster fix for the simplest cases. I proposed a test-and-learn with rideshare services, letting their nearby drivers deliver fuel to stranded motorists instead of waiting on a small pool of tow trucks.</p>
           <h3>The idea I'm still arguing with myself about</h3>
           <p>Priority dispatch through tipping: let customers tip the driver directly to improve their odds of a faster response. The marketplace logic is sound, and it would probably work. That's the problem. This project started with a man who couldn't get help on a −8° roadside. A pay-to-be-rescued-faster tier deprioritizes whoever can least afford to bid, and in an emergency service, willingness to pay is a bad proxy for need. Where I've landed: prioritize by severity and exposure, not price.</p>
           <h3>What I carry into the next one</h3>
