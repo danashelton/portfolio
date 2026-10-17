@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muber Case Study | Dana Shelton</title>
+  <meta name="description" content="Muber: an on-demand 'friend with a truck' marketplace I founded and designed, from a Case Western capstone journey map to an Ohio launch. Case study by Dana Shelton.">
+  <meta property="og:title" content="Muber: Your On-Demand Friend with a Truck | Dana Shelton">
+  <meta property="og:description" content="Everyone needs a friend with a truck. Not everyone has one.">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <style>
+    /* Muber Pink #EC008C is the brand color; text uses a deeper pink that passes WCAG AA on white. */
+    :root { --accent: #b0006a; --accent-soft: #fde6f2; --pink: #ec008c; }
+    .cs-hero { border-top: 6px solid var(--pink); }
+    .video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #111; margin: 40px 0 12px; }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .rules { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 12px; }
+    .rules li { padding: 16px 20px; border-left: 4px solid var(--pink); background: var(--paper-alt); border-radius: 6px; color: var(--ink); }
+    .rules li strong { display: block; margin-bottom: 2px; }
+    .swatches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+    .swatches div { border-radius: 10px; padding: 56px 14px 14px; font-size: 13px; line-height: 1.4; border: 1px solid var(--line); }
+    .swatches strong { display: block; font-size: 14px; }
+    .two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (max-width: 760px) { .two { grid-template-columns: 1fr; } }
+    @media (max-width: 760px) { .swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  </style>
+</head>
+<body class="cs">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="cs-nav" aria-label="Site">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Dana</a>
+      <div class="links">
+        <a href="index.html">Case studies</a>
+        <a href="https://www.linkedin.com/in/danasheltondesign" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:1danashelton@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="toc" aria-label="On this page">
+    <a href="#overview">Overview</a>
+    <a href="#problem">Problem</a>
+    <a href="#goals">Goals</a>
+    <a href="#process">Process</a>
+    <a href="#discover">Discover</a>
+    <a href="#define">Define</a>
+    <a href="#design">Design</a>
+    <a href="#decide">Decide</a>
+    <a href="#brand">Brand</a>
+    <a href="#outcomes">Where it stands</a>
+    <a href="#reflection">Reflection</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <header class="cs-hero">
+      <div class="wrap">
+        <span class="eyebrow">Case study · Two-sided marketplace · Founder</span>
+        <h1>Everyone needs a friend with a truck. Not everyone has one.</h1>
+        <p class="lede">Muber: an on-demand marketplace connecting people who have one big thing to move with nearby drivers who already own a truck. I founded it, and I've designed it from the first journey map to launch.</p>
+      </div>
+    </header>
+
+    <!-- ============ SNAPSHOT ============ -->
+    <section class="snapshot" aria-label="Project snapshot">
+      <div class="wrap">
+        <dl>
+          <div><dt>Company</dt><dd>Muber (my company, an Ohio LLC)</dd></div>
+          <div><dt>Product</dt><dd>Two-sided mobile marketplace: customer app, driver app, and admin tools</dd></div>
+          <div><dt>My role</dt><dd>Founder: research, product design, brand, product strategy, and launch planning</dd></div>
+          <div><dt>Origin</dt><dd>My Case Western capstone project, 2019</dd></div>
+          <div><dt>Timeline</dt><dd>Research and prototype 2019; company formed 2020; relaunched for market in 2025–2026</dd></div>
+          <div><dt>Status</dt><dd>Pre-launch, Ohio first</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="cs-section" id="overview">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Overview</span>
+          <h2>A capstone that refused to stay a capstone</h2>
+          <p>For my Case Western capstone, I looked for a problem I could solve for people that could also be profitable. I found it in the most ordinary errand there is: getting a couch, a mattress, or a dresser from one place to another.</p>
+          <p>If you have a friend with a truck, it's an afternoon and a case of beer. If you don't, it's a truck rental reservation, a day's worth of fees for an hour's worth of work, and nobody to help you lift. Meanwhile, plenty of people already own a pickup or a box truck and would gladly earn from it.</p>
+          <p>Muber connects the two. It's built on a simple idea: community enablement over corporate extraction. The platform should make it easy for neighbors to help neighbors, and pay the people doing the work fairly.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="cs-section alt" id="problem">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Problem</span>
+          <h2>The moving industry is built for whole houses, not one couch</h2>
+          <p>Mapping a real self-move end to end showed where it breaks down.</p>
+        </div>
+        <div class="grid grid-3 reveal">
+          <div class="card"><span class="kicker">Built for big moves</span><h4>Reservations and full-day rentals</h4><p>Truck rental assumes you plan ahead and keep the truck all day. Most moves come with little warning, and many are a single item.</p></div>
+          <div class="card"><span class="kicker">Price drift</span><h4>The quote isn't the bill</h4><p>Reserved trucks turned out to be unavailable, fees came in higher than advertised, and customers felt run around.</p></div>
+          <div class="card"><span class="kicker">No hands</span><h4>Nobody to help lift</h4><p>Friends and family weren't available or didn't want to help, and the heavy items couldn't be moved alone.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GOALS ============ -->
+    <section class="cs-section" id="goals">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Goals</span>
+          <h2>Fair to both sides of the marketplace</h2>
+          <p>A marketplace only works if both sides want to come back. So every goal had a customer half and a driver half.</p>
+        </div>
+        <div class="grid grid-4 reveal">
+          <div class="card"><span class="kicker">Customers</span><h4>On demand</h4><p>Book a truck now. Scheduling ahead is an option, not a requirement.</p></div>
+          <div class="card"><span class="kicker">Customers</span><h4>No surprise charges</h4><p>See the price before you book, and pay only for what the job actually took.</p></div>
+          <div class="card"><span class="kicker">Drivers</span><h4>Pay drivers fairly</h4><p>Earn from a truck you already own, and keep 100% of your tips.</p></div>
+          <div class="card"><span class="kicker">Business</span><h4>Profitable from day one</h4><p>Unit economics that work in one market before expanding to the next.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="cs-section alt" id="process">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Process</span>
+          <h2>How the work moved</h2>
+        </div>
+        <ol class="process reveal">
+          <li><strong>Discover</strong><span>Journey map of a real self-move, stage by stage</span></li>
+          <li><strong>Define</strong><span>Turned each pain point into a product principle</span></li>
+          <li><strong>Design</strong><span>Flow at the chalkboard, written spec, clickable prototype</span></li>
+          <li><strong>Decide</strong><span>MVP scope, pricing, payments, and cancellation rules</span></li>
+          <li><strong>Launch</strong><span>Brand system, compliance, and Ohio launch readiness</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DISCOVER ============ -->
+    <section class="cs-section" id="discover">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">01 · Discover</span>
+          <h2>Following one move from "I need a truck" to "now what?"</h2>
+          <p>I mapped the journey of someone moving household goods with a rental truck across five stages: aware, search, decide, negotiate, and coordinate. For each, I captured what they were trying to do, how they felt, and what went wrong.</p>
+          <p>The emotional line tells the story. It never starts high, and it bottoms out twice: when the reserved truck isn't there, and on moving day, when there's nobody to help carry the heavy things.</p>
+        </div>
+        <figure class="shot reveal">
+          <img src="../assets/img/muber/journey-map.jpg" alt="Muber journey map with five stages (aware, search, decide, negotiate, coordinate) and rows for user goal, emotions, problems, and ideas" loading="lazy" width="1800" height="900">
+          <figcaption>The 2019 journey map. Each stage's problems produced an idea in the bottom row, and those ideas became the product.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ DEFINE ============ -->
+    <section class="cs-section alt" id="define">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">02 · Define</span>
+          <h2>Every pain point became a principle</h2>
+          <p>The "ideas" row of the journey map is the product brief. I treated each one as a principle the product had to keep, not a feature to ship once.</p>
+        </div>
+        <div class="grid two reveal">
+          <div class="card"><span class="kicker">Limited warning before a move</span><h4>On demand first</h4><p>Request a truck now. Scheduling ahead is supported when you know the date, but it's never required.</p></div>
+          <div class="card"><span class="kicker">Paying for a whole day</span><h4>Pay only for time used</h4><p>The driver comes to you, and you pay for the job, not a rental period.</p></div>
+          <div class="card"><span class="kicker">No one to help lift</span><h4>A truck and a pair of hands</h4><p>The driver can help load and unload, so you're not left alone with a couch.</p></div>
+          <div class="card"><span class="kicker">Fees higher than advertised</span><h4>Pay drivers fairly, charge users fairly</h4><p>Both sides of the price have to feel honest, or one side of the marketplace leaves.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESIGN ============ -->
+    <section class="cs-section" id="design">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">03 · Design</span>
+          <h2>Words first, then pixels</h2>
+          <p>We worked out the onboarding flow at a chalkboard: splash, log in, sign up. Then I wrote every screen as a plain-text spec before drawing anything. That meant every field, every disabled button, every error message, and every integration note.</p>
+          <p>Writing it out forced decisions early. Phone verification by SMS code. A cashless service, so billing is part of sign-up. Friendly error copy ("Eek! Please make sure you use at least 6 characters…") instead of a red outline and a shrug.</p>
+        </div>
+        <div class="phones reveal">
+          <figure class="shot">
+            <img src="../assets/img/muber/chalkboard-flow.jpg" alt="Working out the onboarding flow at a chalkboard: 1) Splash, with email login, Facebook login, and sign up; 2) Sign up" loading="lazy" width="503" height="669">
+            <figcaption>Working out the flow at the chalkboard, March 2019.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../assets/img/muber/spec-onboarding-1.jpg" alt="Written spec for log in, forgot password, and sign up screens, with form fields, disabled states, and error copy" loading="lazy" width="720" height="1480">
+            <figcaption>The written spec: log in, password reset, and sign up.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="../assets/img/muber/spec-onboarding-2.jpg" alt="Written spec for SMS code entry, billing, promo code, and the home screen navigation, with integration notes for SMS authentication and payments" loading="lazy" width="720" height="1480">
+            <figcaption>SMS verification, billing, and integration notes for engineering.</figcaption>
+          </figure>
+        </div>
+        <div class="ui-pair reveal">
+          <div class="read" style="margin:0">
+            <h3>Then the prototype</h3>
+            <p>From the spec, I built a clickable prototype of the customer experience. The welcome screen sets the tone: dark, calm, one pink action, and the promise in plain words: your on-demand friend with a truck.</p>
+          </div>
+          <figure class="shot phone">
+            <img src="../assets/img/muber/splash.jpg" alt="Muber prototype welcome screen, using the original 2019 spelling: truck logo, 'Welcome to Müber, your on demand friend with a truck,' and a pink Next button on a dark background" loading="lazy" width="750" height="1624">
+          </figure>
+        </div>
+        <div class="video reveal">
+          <iframe src="https://www.youtube-nocookie.com/embed/dQmxEpuNqf0?rel=0" title="Muber prototype demo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        </div>
+        <p class="read reveal" style="font-size:14px;color:var(--muted)">Prototype demo of the Muber app.</p>
+      </div>
+    </section>
+
+    <!-- ============ DECIDE ============ -->
+    <section class="cs-section alt" id="decide">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">04 · Decide</span>
+          <h2>Policies are part of the experience</h2>
+          <p>Taking Muber from prototype to launch meant designing the parts customers never see as screens: what's in scope, how money moves, and what happens when plans change. Each one is a UX decision with a dollar amount attached.</p>
+        </div>
+        <div class="grid two reveal">
+          <div class="card"><span class="kicker">Scope</span><h4>Launch driver-only</h4><p>I cut separate helpers and a labor-only service from the first release. One driver, one truck, one job is the smallest thing that proves the marketplace. Helpers come after launch.</p></div>
+          <div class="card"><span class="kicker">Pricing</span><h4>A range up front, never a surprise</h4><p>Customers see an estimated range before booking. Their card is authorized for the top of it and charged only the final amount, so if a job finishes early, they pay less.</p></div>
+          <div class="card"><span class="kicker">Payments</span><h4>One charge, tip included</h4><p>One authorization and one final charge per job, with the tip folded in, so customers see one line on their statement. Tip options are none, 15%, 20%, or custom, and 100% goes to the driver.</p></div>
+          <div class="card"><span class="kicker">Cancellations</span><h4>Generous to customers without burning drivers</h4><p>Canceling is free until the driver is on the way, or anytime 24+ hours out. After that, fees are tiered, and 100% of every cancellation fee goes to the driver whose time it cost.</p></div>
+        </div>
+        <p class="pull reveal" style="margin-top:56px">Pay drivers fairly. Charge users fairly. If either side feels cheated, the marketplace is over.</p>
+      </div>
+    </section>
+
+    <!-- ============ BRAND ============ -->
+    <section class="cs-section" id="brand">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">05 · Brand</span>
+          <h2>One pink thing per screen</h2>
+          <p>The truck mark from the 2019 prototype stayed for launch, redrawn as clean vector artwork so it scales from a 16px favicon to a truck door. Around it, I built a production-ready brand system: logo lockups, color tokens, a type scale, UI components, and social templates.</p>
+        </div>
+        <div class="swatches reveal" aria-label="Brand colors">
+          <div style="background:#ec008c;color:#fff;border-color:#ec008c"><strong>Muber Pink</strong>#EC008C · primary action</div>
+          <div style="background:#0b1120;color:#fff;border-color:#0b1120"><strong>Midnight Navy</strong>#0B1120 · background</div>
+          <div style="background:#334155;color:#fff;border-color:#334155"><strong>Slate</strong>#334155 · body copy</div>
+          <div style="background:#f8fafc;color:#212121"><strong>Cloud</strong>#F8FAFC · light surfaces</div>
+        </div>
+        <ul class="rules reveal">
+          <li><strong>Pink leads, navy holds.</strong>One pink element per screen that matters. If three things are pink, nothing is.</li>
+          <li><strong>Dark by default.</strong>The app, site, and social lead with navy. Light mode is for documents, invoices, and print.</li>
+          <li><strong>Accessible on purpose.</strong>Bright pink passes contrast for buttons and large text, but not for body copy on white, so pink text uses a deeper shade. (This page does the same.)</li>
+          <li><strong>A voice like a friend.</strong>Easygoing, capable, and already on the way. Not a freight company, a van line, or a logistics platform.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ OUTCOMES ============ -->
+    <section class="cs-section alt" id="outcomes">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Where it stands</span>
+          <h2>From a journey map to a company</h2>
+          <p>Muber hasn't launched yet, so there are no usage numbers to report. Here's what exists.</p>
+        </div>
+        <div class="grid grid-4 reveal">
+          <div class="card metric"><span class="num">2019</span><h4>Research and prototype</h4><p>Journey map, written spec, and a clickable prototype.</p></div>
+          <div class="card metric"><span class="num">2020</span><h4>Company formed</h4><p>Muber organized as an Ohio LLC.</p></div>
+          <div class="card metric"><span class="num">MVP</span><h4>Scoped and specified</h4><p>Customer app, driver app, admin tools, pricing, payments, and dispatch.</p></div>
+          <div class="card metric"><span class="num">OH</span><h4>Launching in Ohio</h4><p>Ohio first, with a state-by-state compliance plan for expanding across the Midwest.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REFLECTION ============ -->
+    <section class="cs-section" id="reflection">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Reflection</span>
+          <h2>What being the founder taught the designer</h2>
+          <h3>Cutting is a design decision</h3>
+          <p>Helpers were in the very first journey map, and cutting them from launch was hard. But a launch with fewer moving parts teaches you more, faster. The feature isn't gone. It's sequenced.</p>
+          <h3>The rules are the interface</h3>
+          <p>A card hold, a tip prompt, or a cancellation fee is felt as strongly as any screen. In a marketplace, those policies are where trust is won or lost, so I design them with the same care as the UI.</p>
+          <h3>What's next</h3>
+          <p>Launch will test what research can't: whether there are enough drivers in the first market to make "on demand" true. Proving that in Ohio comes before expanding anywhere else.</p>
+          <h3>What I carry into the next one</h3>
+          <p><strong>Start with the journey, not the app.</strong> Every principle Muber launches with traces back to one map drawn in 2019. <strong>Two-sided means two users.</strong> A choice that delights customers but costs drivers isn't a good design. <strong>Write it before you draw it.</strong> A plain-text spec surfaces the hard questions while they're still cheap.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="next" aria-label="More work">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">More work</span>
+        <h2>See all case studies</h2>
+      </div>
+      <a class="btn" href="index.html">All case studies</a>
+    </div>
+  </section>
+
+  <footer class="cs-foot">
+    <div class="wrap">Dana Shelton · Product &amp; Experience Designer · Enterprise UX, AI-enabled systems, regulated platforms</div>
+  </footer>
+
+  <script src="../assets/js/case-study.js"></script>
+</body>
+</html>

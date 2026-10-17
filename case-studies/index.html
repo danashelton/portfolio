@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Case Studies | Dana Shelton</title>
+  <meta name="description" content="Case studies by Dana Shelton, Product & Experience Designer: Talis Clinical ICU monitoring, Nationwide roadside assistance, and Muber, a two-sided marketplace she founded.">
+  <meta property="og:title" content="Case Studies | Dana Shelton">
+  <meta property="og:description" content="Three products, one way of working: find the real person, name the real constraint, and prove the change.">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <style>
+    .studies { display: grid; gap: 40px; margin-top: 8px; }
+    .study {
+      display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0;
+      background: var(--paper); border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+      text-decoration: none; color: inherit; transition: box-shadow .2s, transform .2s;
+    }
+    .study:hover { box-shadow: 0 18px 40px rgba(0,0,0,.10); transform: translateY(-2px); }
+    .study:focus-visible { outline: 3px solid var(--ink); outline-offset: 4px; }
+    .study .cover { display: flex; align-items: center; background: var(--bg); }
+    .study .cover img { display: block; width: 100%; height: 100%; height: auto; aspect-ratio: 8 / 5; }
+    .study .body { padding: 36px 36px 32px; display: flex; flex-direction: column; }
+    .study .tag { font-size: 12px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--c); margin-bottom: 10px; }
+    .study h2 { font-size: clamp(24px, 2.6vw, 30px); font-weight: 800; margin: 0 0 12px; }
+    .study p { margin: 0 0 16px; font-size: 16px; color: var(--ink-soft); }
+    .study .role { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
+    .study .role strong { color: var(--ink); font-weight: 600; }
+    .study ul { list-style: none; padding: 0; margin: 0 0 24px; display: grid; gap: 8px; }
+    .study li { font-size: 15px; color: var(--ink); padding-left: 16px; border-left: 3px solid var(--c); line-height: 1.5; }
+    .study .go { margin-top: auto; font-weight: 600; color: var(--c); font-size: 15px; }
+    .study .go::after { content: " →"; }
+    .talis { --c: #0f766e; --bg: #0f766e; }
+    .nationwide { --c: #1d4ed8; --bg: #1d4ed8; }
+    .muber { --c: #b0006a; --bg: #0b1120; }
+    .approach { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 32px; }
+    @media (max-width: 860px) {
+      .study { grid-template-columns: 1fr; }
+      .study .body { padding: 28px 24px 26px; }
+    }
+  </style>
+</head>
+<body class="cs">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="cs-nav" aria-label="Site">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Dana</a>
+      <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="https://www.linkedin.com/in/danasheltondesign" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:1danashelton@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="cs-hero">
+      <div class="wrap">
+        <span class="eyebrow" style="color:#d6d6d6">Case studies</span>
+        <h1>Find the real person. Name the real constraint. Prove the change.</h1>
+        <p class="lede">I'm Dana Shelton, a product and experience designer. These three studies cover an ICU monitoring platform, a flagship insurance app, and a marketplace I founded. Each one follows the same structure, so you can compare how I work from problem to outcome.</p>
+      </div>
+    </header>
+
+    <section class="cs-section" aria-label="Case studies">
+      <div class="wrap">
+        <div class="studies">
+
+          <a class="study talis" href="talis-clinical.html">
+            <span class="cover"><img src="../assets/img/covers/talis.jpg" alt="" width="1200" height="750"></span>
+            <span class="body">
+              <span class="tag">Healthcare · 0 → 1 · Enterprise</span>
+              <h2>Talis Clinical: Advanced Clinical Guidance</h2>
+              <p>Clinical decision support and remote patient monitoring for ICUs, co-developed with Beth Israel Deaconess Medical Center, a Harvard Medical School teaching hospital.</p>
+              <span class="role"><strong>Role:</strong> First UX designer, and the only one for most of my tenure</span>
+              <ul>
+                <li>ECMO monitoring redeployed for COVID-19, live at major hospitals nationwide</li>
+                <li>Designed the re-sorting patient list, now patent pending</li>
+                <li>Built the company's design practice from zero</li>
+              </ul>
+              <span class="go">Read the case study</span>
+            </span>
+          </a>
+
+          <a class="study nationwide" href="nationwide-roadside.html">
+            <span class="cover"><img src="../assets/img/covers/nationwide.jpg" alt="" width="1200" height="750"></span>
+            <span class="body">
+              <span class="tag">Insurance · Flagship mobile app</span>
+              <h2>Nationwide: Roadside Assistance Redesign</h2>
+              <p>The industry's first live tow-truck tracking, built because one customer was left guessing on a −8° roadside.</p>
+              <span class="role"><strong>Role:</strong> Lead UX Design Consultant</span>
+              <ul>
+                <li>Self-service success up from 54% to 96%</li>
+                <li>34% fewer support and status calls; NPS up 11%</li>
+                <li>Keynova "Best in Class," Q1 2023</li>
+              </ul>
+              <span class="go">Read the case study</span>
+            </span>
+          </a>
+
+          <a class="study muber" href="muber.html">
+            <span class="cover"><img src="../assets/img/covers/muber.jpg" alt="" width="1200" height="750"></span>
+            <span class="body">
+              <span class="tag">Two-sided marketplace · Founder</span>
+              <h2>Muber: Your On-Demand Friend with a Truck</h2>
+              <p>A marketplace connecting people who have one big thing to move with nearby drivers who already own a truck.</p>
+              <span class="role"><strong>Role:</strong> Founder: research, product design, brand, and strategy</span>
+              <ul>
+                <li>From a 2019 capstone journey map to an Ohio company</li>
+                <li>Pricing, payment, and cancellation rules designed for both sides</li>
+                <li>Pre-launch, Ohio first</li>
+              </ul>
+              <span class="go">Read the case study</span>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-section alt" aria-labelledby="how">
+      <div class="wrap">
+        <div class="read">
+          <span class="section-label">How every study is organized</span>
+          <h2 id="how">Same layout, every time</h2>
+          <p>Each case study opens with a snapshot (company, product, role, team, timeline) and then walks through the work in order.</p>
+        </div>
+        <div class="approach">
+          <div class="card"><span class="kicker">Context</span><h4>Overview and problem</h4><p>Who it was for, what was broken, and what we could and couldn't change.</p></div>
+          <div class="card"><span class="kicker">Intent</span><h4>Goals and process</h4><p>How we defined success before designing, and how the work moved.</p></div>
+          <div class="card"><span class="kicker">The work</span><h4>Discover, define, decide, design</h4><p>Research, the decisions it drove, and the artifacts behind them.</p></div>
+          <div class="card"><span class="kicker">Proof</span><h4>Outcomes and reflection</h4><p>What changed, and what I'd carry into the next project.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cs-foot">
+    <div class="wrap">Dana Shelton · Product &amp; Experience Designer · Enterprise UX, AI-enabled systems, regulated platforms</div>
+  </footer>
+</body>
+</html>
