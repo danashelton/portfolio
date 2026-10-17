@@ -324,3 +324,11 @@ table.rice td:not(:first-child), table.rice th:not(:first-child) { text-align: r
 .badge { display: inline-block; vertical-align: middle; margin-left: 6px; padding: 2px 9px; border-radius: 99px;
   background: var(--ink); color: #fff; font-family: 'Poppins', sans-serif; font-size: 11px; font-weight: 600;
   letter-spacing: .5px; text-transform: uppercase; white-space: nowrap; }
+
+/* ---------- Phone screen gallery ---------- */
+.phones { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; align-items: start; margin: 24px 0 40px; }
+.phones figure.shot img { border-radius: 18px; border: 5px solid #111; }
+@media (max-width: 760px) {
+  .phones { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; -webkit-overflow-scrolling: touch; }
+  .phones figure { scroll-snap-align: start; }
+}

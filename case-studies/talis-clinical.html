@@ -287,6 +287,13 @@
             <figcaption>Mobile, COVID-19 configuration: ventilator values at a glance, then protective lung ventilation guidance alerts. Test data shown.</figcaption>
           </figure>
         </div>
+        <h3 class="read reveal">ECMO app screens</h3>
+        <p class="read reveal">Designed in summer 2019. Tap a screen to see the full scrolling page.</p>
+        <div class="phones reveal">
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ecmo-home.jpg" data-full="../assets/img/talis/ecmo-home-full.jpg" alt="ECMO patient home: vitals, pump speed and flow, pressure gauge, recent activity and lab results" loading="lazy" width="414" height="896"><figcaption>Patient home: pump RPM and flow, ΔP gauge, activity, labs</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ecmo-encounter.jpg" data-full="../assets/img/talis/ecmo-encounter-full.jpg" alt="ECMO encounter with critical alert: vitals trend with time scrubber, ECMO mode toggles, cannulation diagram, labs, fluids and care plan" loading="lazy" width="414" height="896"><figcaption>Encounter: vitals trend, ECMO mode, cannulation, fluids, care plan</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ecmo-patient.jpg" data-full="../assets/img/talis/ecmo-patient-full.jpg" alt="ECMO patient view: vitals trend with time scrubber, then patient and case information, ECMO run and mode settings" loading="lazy" width="414" height="896"><figcaption>Vitals trend, case information, ECMO mode settings</figcaption></figure>
+        </div>
         <h3 class="read reveal">Design system components</h3>
         <div class="grid grid-3 reveal">
           <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-text-fields.jpg" alt="Design system sheet of text field states: default, focused, filled, error and disabled" loading="lazy" width="1080" height="1980"><figcaption>Text fields and states</figcaption></figure>
@@ -305,6 +312,12 @@
           <p>When the pandemic hit, the system paid off in a way none of us planned. Because the remote monitoring app was built from shared, reusable components, we reskinned the ECMO app into a COVID-19 patient monitoring app. Physicians and care teams could watch ventilated patients remotely, reducing their exposure to the virus.</p>
           <p>It went live at several major hospitals nationwide during the pandemic.</p>
           <p>I designed the re-sorting patient list, which ranks patients by acuity and momentum so clinicians see who needs help first. The feature is now patent pending.</p>
+        </div>
+        <h3 class="read reveal">COVID-19 RemoteView screens</h3>
+        <div class="phones reveal">
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/rv-patient-list.jpg" data-full="../assets/img/talis/rv-patient-list-full.jpg" alt="RemoteView patient list filtered by COVID-19, ventilated and mild hypoxemia, with a high tidal volume flag on the first patient" loading="lazy" width="828" height="1472"><figcaption>Patient list filtered by COVID-19 status, with risk flags</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/rv-patient-home.jpg" data-full="../assets/img/talis/rv-patient-home-full.jpg" alt="RemoteView patient home: ventilator values, P/F ratio gauge, guidance alerts for mild hypoxemia and high tidal volume, labs and care team" loading="lazy" width="828" height="1792"><figcaption>Patient home: ventilator values and guidance alerts</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/rv-trends.jpg" data-full="../assets/img/talis/rv-trends-full.jpg" alt="RemoteView vital signs trends: SpO2 and arterial pressure, FiO2, tidal volume and ventilator pressures over time" loading="lazy" width="828" height="1792"><figcaption>Trends: vitals and ventilator settings over time</figcaption></figure>
         </div>
         <p class="pull reveal">A design system isn't overhead. It's what let a small team ship a pandemic response on existing foundations.</p>
         <div class="grid grid-3 reveal">
@@ -382,7 +395,7 @@
         btn.setAttribute('aria-label', 'Enlarge image: ' + img.alt);
         img.parentNode.insertBefore(btn, img); btn.appendChild(img);
         btn.addEventListener('click', function () {
-          big.src = img.currentSrc || img.src; big.alt = img.alt;
+          big.src = img.dataset.full || img.currentSrc || img.src; big.alt = img.alt;
           var fc = btn.closest('figure').querySelector('figcaption'); cap.textContent = fc ? fc.textContent : '';
           document.body.style.overflow = 'hidden'; dlg.showModal();
         });
