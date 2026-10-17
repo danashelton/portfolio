@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nationwide Roadside Assistance Case Study | Dana Shelton</title>
+  <meta name="description" content="Redesigning roadside assistance in Nationwide's flagship mobile app: live tow-truck tracking, a 96% self-service success rate, and Keynova's Best in Class recognition. Case study by Dana Shelton.">
+  <meta property="og:title" content="Nationwide: Roadside Assistance Redesign | Dana Shelton">
+  <meta property="og:description" content="We couldn't control when help arrived. We could control whether customers were left guessing.">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+  <style>
+    :root { --accent: #1d4ed8; --accent-soft: #e8eefc; }
+    .video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #111; margin: 40px 0 12px; }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 32px; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper); }
+    .flow > div { padding: 24px; border-right: 1px solid var(--line); }
+    .flow > div:last-child { border-right: 0; background: var(--accent-soft); }
+    .flow .tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); display: block; margin-bottom: 8px; }
+    .flow > div:last-child .tag { color: var(--accent); }
+    .flow p { font-size: 15px; margin: 0; }
+    @media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .flow > div { border-right: 0; border-bottom: 1px solid var(--line); } }
+    .awards { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 12px; }
+    .awards li { padding: 16px 20px; border-left: 4px solid var(--accent); background: var(--paper-alt); border-radius: 6px; color: var(--ink); font-weight: 500; }
+  </style>
+</head>
+<body class="cs">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="cs-nav" aria-label="Site">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Dana</a>
+      <div class="links">
+        <a href="../index.html">Work</a>
+        <a href="https://www.linkedin.com/in/danasheltondesign" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:1danashelton@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="toc" aria-label="On this page">
+    <a href="#overview">Overview</a>
+    <a href="#problem">Problem</a>
+    <a href="#goals">Goals &amp; metrics</a>
+    <a href="#process">Process</a>
+    <a href="#discover">Discover</a>
+    <a href="#define">Define</a>
+    <a href="#decide">Decide</a>
+    <a href="#design">Design</a>
+    <a href="#outcomes">Outcomes</a>
+    <a href="#reflection">Reflection</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <header class="cs-hero">
+      <div class="wrap">
+        <span class="eyebrow">Case study · Insurance · Flagship mobile app</span>
+        <h1>We couldn't control when help arrived. We could control whether customers were left guessing.</h1>
+        <p class="lede">Nationwide: redesigning roadside assistance in the flagship mobile app, with the industry's first live tow-truck tracking.</p>
+      </div>
+    </header>
+
+    <!-- ============ SNAPSHOT ============ -->
+    <section class="snapshot" aria-label="Project snapshot">
+      <div class="wrap">
+        <dl>
+          <div><dt>Company</dt><dd>Nationwide Insurance</dd></div>
+          <div><dt>Product</dt><dd>Flagship mobile app: roadside assistance</dd></div>
+          <div><dt>My role</dt><dd>UX Design Consultant: end-to-end design, research direction, engineering partnership</dd></div>
+          <div><dt>Team</dt><dd>Product owner, claims mobile pod, product analyst, UX researcher, creative services, accessibility, Agero (dispatch partner)</dd></div>
+          <div><dt>Timeline</dt><dd>About two quarters, kicked off Q1 2022</dd></div>
+          <div><dt>Recognition</dt><dd>Keynova "Best in Class," Q1 2023; Nationwide NATALIE Award</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="cs-section" id="overview">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Overview</span>
+          <h2>It started with an app store review I couldn't put down</h2>
+          <p>During onboarding in December 2021, I came across a review from a customer who had requested roadside help through our app on a night when it was −8°F. He was told the driver had arrived. Nobody came. A text said he'd wait 133 minutes. He ended up calling 911 to get a jump start. It was the second time it had happened to him.</p>
+          <p>The tow itself wasn't the failure. The failure was that we left a frightened customer guessing, on the side of the road, in a situation that was dangerous in more ways than one. I turned that review into a proposal, socialized it with product and senior leadership, and then owned the redesign end to end. It became the first feature built on Nationwide's new design system.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="cs-section alt" id="problem">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Problem</span>
+          <h2>We owned the request, not the truck, and then we went silent</h2>
+          <p>Naming precisely what we could and couldn't fix is what revealed the real problem.</p>
+        </div>
+        <div class="grid grid-3 reveal">
+          <div class="card"><span class="kicker">Not our trucks</span><h4>Dispatch ran through a partner</h4><p>Agero handled fulfillment for several major carriers, including State Farm and USAA. We couldn't make trucks arrive faster.</p></div>
+          <div class="card"><span class="kicker">Not our data</span><h4>The fix sat in the backlog</h4><p>Agero's new Swoop API could return live status and truck location. It had sat unprioritized for months.</p></div>
+          <div class="card"><span class="kicker">Our silence</span><h4>Status lived outside our app</h4><p>After requesting help, customers had to tap a link in a partner text message to track it. Data showed most never did.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GOALS ============ -->
+    <section class="cs-section" id="goals">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Goals &amp; success metrics</span>
+          <h2>Replace silence with information, inside our own app</h2>
+          <p>Our feature canvas set the success factors before any design work began, and they became the scorecard at launch.</p>
+        </div>
+        <div class="grid grid-4 reveal">
+          <div class="card metric"><span class="num">↓ <small>calls</small></span><h4>Fewer status calls</h4><p>Customers shouldn't need to phone us to learn where help is.</p></div>
+          <div class="card metric"><span class="num">↑ <small>success</small></span><h4>Self-service success</h4><p>More requests completed in the app without help.</p></div>
+          <div class="card metric"><span class="num">↑ <small>ratings</small></span><h4>Feature ratings</h4><p>Better ratings and fewer negative reviews.</p></div>
+          <div class="card metric"><span class="num">↑ <small>trust</small></span><h4>Reassurance</h4><p>Engagement with live tracking while customers wait.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="cs-section alt" id="process">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Process</span>
+          <h2>How the work moved</h2>
+        </div>
+        <ol class="process reveal">
+          <li><strong>Discover</strong><span>App store review, session replays, failure pattern search</span></li>
+          <li><strong>Align</strong><span>One-page feature canvas co-written with product, engineering, analytics</span></li>
+          <li><strong>Research</strong><span>15 generative interviews about real roadside emergencies</span></li>
+          <li><strong>Design</strong><span>Forgiving request flow, ETA entry point, live tracking map</span></li>
+          <li><strong>Ship</strong><span>WebSockets with engineering; accessibility review; launch</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DISCOVER ============ -->
+    <section class="cs-section" id="discover">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">01 · Discover</span>
+          <h2>One angry review isn't a business case. Session replays are.</h2>
+          <p>With our product analyst, I pulled session replays in UXCam and reconstructed that customer's actual sessions. Then we searched for the same failure signature across other users.</p>
+          <p>It had happened to him twice. It wasn't a fluke but a repeatable failure with a traceable cause. That turned an angry review into a prioritizable defect with a ticket number. We brought the replays, not the anecdote, to the product team.</p>
+          <p>Discovery surfaced two more insights. Nearly half of customers were returning to the Nationwide app after requesting help, trying to track it. And many worried that filing a roadside request would raise their rates, the way a claim might.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEFINE ============ -->
+    <section class="cs-section alt" id="define">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">02 · Define</span>
+          <h2>One canvas, the same authors on every revision</h2>
+          <p>The product owner, engineering lead, product analyst, and I filled in a one-page feature canvas together: concept, problem, MVP, target users, success factors, risks, and timeline. We referenced it continuously instead of filing it away, so the story never forked. It was the thing we argued in front of, instead of arguing in meetings.</p>
+        </div>
+        <figure class="shot reveal">
+          <img src="../assets/img/nationwide/feature-canvas.jpg" alt="Feature canvas for the flagship mobile roadside assistance redesign: concept, problem, competition, discovery, team, MVP, target group, success factors, characteristics, core functions and vision" loading="lazy" width="1800" height="1067">
+          <figcaption>The feature canvas: real-time tracking and ETAs as the MVP, two-way driver chat as the next step, and success measured in fewer calls and more reassurance.</figcaption>
+        </figure>
+        <div class="read reveal">
+          <h3>Generative research: begin in empathy, then find the pattern</h3>
+          <p>We interviewed 15 people who had used roadside assistance from any provider in the last 12 months. What did they expect in that moment? How did they decide what to do?</p>
+          <p>One story reframed the project. A woman in Texas ran out of gas, and her battery died while she waited for the tow truck. Three trucks and several hours later, she took an Uber to a gas station and flagged down a stranger for a jump. The wait hadn't just failed to solve her problem. It created a second, worse one.</p>
+        </div>
+        <div class="grid grid-3 reveal">
+          <div class="card"><span class="kicker">15 minutes</span><h4>Silence creates phone calls</h4><p>After about 15 minutes without an update, anxiety set in, and anxiety led to a phone call. The call wasn't the problem. The silence was.</p></div>
+          <div class="card"><span class="kicker">Stranded ≠ parked</span><h4>Design for shaky hands</h4><p>People arrive cold and panicked. So: no strict validation, fewer required fields, an illustration-guided flow, and forgiving inputs.</p></div>
+          <div class="card"><span class="kicker">The wait is the product</span><h4>Answer the unasked question</h4><p>Ratings, hours, and contact info on the map, because "where do I go for 90 minutes?" was what people really needed to know.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DECIDE ============ -->
+    <section class="cs-section" id="decide">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">03 · Decide</span>
+          <h2>The call I'm proudest of: same pixel, opposite meaning</h2>
+        </div>
+        <div class="flow reveal">
+          <div><span class="tag">Observed</span><p>Returning customers tapped the same button they'd used the first time, expecting a status update, not a new request.</p></div>
+          <div><span class="tag">Consequence</span><p>More than half unintentionally started a duplicate request. Almost all abandoned it by the third screen.</p></div>
+          <div><span class="tag">Decision</span><p>While a request is open, replace the button with a live ETA countdown. It reverts when the job closes.</p></div>
+          <div><span class="tag">Result</span><p>About half now tap into the tracker, and duplicate requests stopped.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESIGN ============ -->
+    <section class="cs-section alt" id="design">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">04 · Design</span>
+          <h2>A forgiving request flow, and a truck you can watch arrive</h2>
+          <h3>Triage in plain language</h3>
+          <p>Each option has a one-line consequence beneath it, and no insurance vocabulary. Customers confirm their location on a map and drag to submit, so a shaky thumb can't send a request by accident.</p>
+          <h3>Live tracking, honestly real time</h3>
+          <p>The truck moves on the map as it drives. We were the first in the industry to offer it, and the first team at Nationwide to ship WebSockets: real-time push instead of polling. That's the only reason a live countdown could be honest rather than approximate. A 15-minute anxiety threshold can't be solved by a screen that refreshes when you open it. The research finding set the technical requirement, not the other way around, and design and engineering scoped it together from the same canvas.</p>
+        </div>
+        <div class="video reveal">
+          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL2_V1PTaMDyTt2YTuccd6X2nYLwwFpLNO" title="Roadside assistance prototype walkthrough videos" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="read reveal" style="font-size:14px;color:var(--muted)">Prototype walkthroughs of the redesigned request and tracking flow.</p>
+        <p class="pull reveal">We can't control when help will arrive. But we can tell you everything we do know, the moment we know it.</p>
+      </div>
+    </section>
+
+    <!-- ============ OUTCOMES ============ -->
+    <section class="cs-section" id="outcomes">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Outcomes</span>
+          <h2>What moved</h2>
+        </div>
+        <div class="grid grid-3 reveal">
+          <div class="card metric"><span class="num">96%</span><h4>Self-service success</h4><p>Up from 54%.</p></div>
+          <div class="card metric"><span class="num">−34%</span><h4>Support and status calls</h4><p>Fewer customers had to call to find out where help was.</p></div>
+          <div class="card metric"><span class="num">+11%</span><h4>NPS</h4><p>Net Promoter Score increase.</p></div>
+          <div class="card metric"><span class="num">9,831</span><h4>Requests in 30 days</h4><p>Submitted through the app in the first month.</p></div>
+          <div class="card metric"><span class="num">8</span><h4>New industry benchmarks</h4><p>New benchmarking criteria set via Keynova.</p></div>
+          <div class="card metric"><span class="num">1st</span><h4>In the industry</h4><p>Live tow-truck tracking; first WebSockets feature shipped at Nationwide.</p></div>
+        </div>
+        <ul class="awards reveal">
+          <li>Keynova "Best in Class Experience," Q1 2023</li>
+          <li>NATALIE Award: Nationwide's technology and innovation excellence award</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ REFLECTION ============ -->
+    <section class="cs-section alt" id="reflection">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Reflection</span>
+          <h2>What I'd do differently, and what I'm still arguing with myself about</h2>
+          <h3>A tradeoff I made</h3>
+          <p>My original interactions relied on a bottom drawer pattern, which a senior designer pushed back on in review. I defended it as appropriate under Material Design's documented guidance. But in the interest of shipping, conceding a component preference was the right call.</p>
+          <h3>The idea I'm still arguing with myself about</h3>
+          <p>Priority dispatch through tipping: let customers tip the driver directly to improve their odds of a faster response. The marketplace logic is sound, and it would probably work. That's the problem. This project started with a man who couldn't get help on a −8° roadside. A pay-to-be-rescued-faster tier deprioritizes whoever can least afford to bid, and in an emergency service, willingness to pay is a bad proxy for need. Where I've landed: prioritize by severity and exposure, not price.</p>
+          <h3>What I carry into the next one</h3>
+          <p><strong>Find the person, not the persona.</strong> Every meaningful decision here traces back to one comment I refused to file away. <strong>The constraint is the brief.</strong> We couldn't fix dispatch, and naming that precisely revealed the real problem: silence. <strong>Instrument, then argue.</strong> Session replay turned an opinion into a defect.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="next" aria-label="More work">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Previous case study</span>
+        <h2>Talis Clinical: Advanced Clinical Guidance</h2>
+      </div>
+      <a class="btn" href="talis-clinical.html">View case study</a>
+    </div>
+  </section>
+
+  <footer class="cs-foot">
+    <div class="wrap">Dana Shelton · Product &amp; Experience Designer · Enterprise UX, AI-enabled systems, regulated platforms</div>
+  </footer>
+
+  <script src="../assets/js/case-study.js"></script>
+</body>
+</html>
