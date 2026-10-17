@@ -1,0 +1,297 @@
+/* =========================================================
+   CASE STUDY TEMPLATE — shared by every case study page
+   Structure (keep identical across studies):
+   Hero > Snapshot > Overview > Problem > Goals & Metrics >
+   Process > Discover > Define > Prioritize > Design >
+   Outcomes > Reflection > Next study
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --ink: #212121;
+  --ink-soft: #4a4a4a;
+  --muted: #6f6f6f;
+  --line: #e4e4e4;
+  --paper: #ffffff;
+  --paper-alt: #f4f4f4;
+  --accent: #0f766e;          /* clinical teal — one accent per study, swap per page */
+  --accent-soft: #e6f2f1;
+  --flag: #b45309;
+  --flag-soft: #fff7ed;
+  --radius: 10px;
+  --max: 1080px;
+  --read: 720px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body.cs {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  background: var(--paper);
+}
+
+.cs h1, .cs h2, .cs h3, .cs h4 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 .6em;
+}
+
+.cs a { color: var(--accent); }
+.cs a:focus-visible, .cs button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 8px;
+  background: var(--ink); color: #fff; padding: 8px 14px; z-index: 100;
+}
+.skip-link:focus { left: 8px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.read { max-width: var(--read); }
+
+/* ---------- Top bar ---------- */
+.cs-nav {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--ink);
+}
+.cs-nav .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.cs-nav .brand {
+  font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px;
+  color: #fff; text-decoration: none; letter-spacing: .5px;
+}
+.cs-nav .links a {
+  color: #d6d6d6; text-decoration: none; font-size: 14px; font-weight: 500;
+  margin-left: 22px; text-transform: uppercase; letter-spacing: 1px;
+}
+.cs-nav .links a:hover { color: #fff; }
+
+/* section progress (desktop) */
+.toc {
+  position: fixed; left: 24px; top: 50%; transform: translateY(-50%);
+  display: none; flex-direction: column; gap: 10px; z-index: 40;
+}
+.toc a {
+  font-size: 12px; color: var(--muted); text-decoration: none;
+  padding-left: 14px; border-left: 2px solid var(--line); line-height: 1.4;
+}
+.toc a.is-active { color: var(--ink); border-left-color: var(--accent); font-weight: 600; }
+@media (min-width: 1400px) { .toc { display: flex; } }
+
+/* ---------- Hero ---------- */
+.cs-hero {
+  background: var(--ink); color: #fff;
+  padding: 96px 0 72px;
+}
+.eyebrow {
+  display: inline-block; font-size: 13px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: var(--accent-soft); margin-bottom: 18px;
+}
+.cs-hero h1 { color: #fff; font-size: clamp(34px, 5vw, 56px); font-weight: 800; max-width: 900px; }
+.cs-hero .lede { font-size: 20px; color: #cfcfcf; max-width: 760px; margin: 0; }
+
+/* ---------- Snapshot strip ---------- */
+.snapshot {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.snapshot dl {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px; margin: 0; padding: 40px 0;
+}
+.snapshot dt {
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--muted); margin-bottom: 6px;
+}
+.snapshot dd { margin: 0; color: var(--ink); font-weight: 500; font-size: 15px; line-height: 1.5; }
+
+/* ---------- Sections ---------- */
+.cs-section { padding: 88px 0; }
+.cs-section.alt { background: var(--paper-alt); }
+.section-label {
+  display: flex; align-items: center; gap: 12px;
+  font-size: 13px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 2px; color: var(--accent); margin-bottom: 14px;
+}
+.section-label::before { content: ""; width: 28px; height: 2px; background: var(--accent); }
+.cs-section h2 { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; }
+.cs-section h3 { font-size: 21px; font-weight: 700; margin-top: 1.6em; }
+.cs-section p { margin: 0 0 1.1em; }
+
+.pull {
+  font-family: 'Montserrat', sans-serif; font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 700; color: var(--ink); line-height: 1.35;
+  border-left: 4px solid var(--accent); padding: 4px 0 4px 24px; margin: 40px 0;
+}
+
+/* ---------- Cards / grids ---------- */
+.grid { display: grid; gap: 24px; margin-top: 32px; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+.card {
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 28px;
+}
+.alt .card { border-color: transparent; }
+.card h4 { font-size: 17px; margin-bottom: .5em; }
+.card p { font-size: 15px; margin: 0; }
+.card .kicker {
+  font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;
+  color: var(--accent); display: block; margin-bottom: 8px;
+}
+
+/* ---------- Metric tiles ---------- */
+.metric { border-top: 3px solid var(--accent); }
+.metric .num {
+  font-family: 'Montserrat', sans-serif; font-size: 40px; font-weight: 800;
+  color: var(--ink); line-height: 1; display: block; margin-bottom: 10px;
+}
+.metric .num small { font-size: 18px; font-weight: 600; color: var(--muted); }
+
+/* ---------- Process timeline ---------- */
+.process {
+  list-style: none; padding: 0; margin: 40px 0 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0;
+  counter-reset: step;
+}
+.process li {
+  position: relative; padding: 52px 20px 0 0; counter-increment: step;
+}
+.process li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute; top: 0; left: 0;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--ink); color: #fff; font-size: 13px; font-weight: 600;
+  display: grid; place-items: center; font-family: 'Montserrat', sans-serif;
+}
+.process li::after {
+  content: ""; position: absolute; top: 19px; left: 44px; right: 6px;
+  height: 2px; background: var(--line);
+}
+.process li:last-child::after { display: none; }
+.process strong { display: block; color: var(--ink); font-family: 'Montserrat', sans-serif; margin-bottom: 4px; }
+.process span { font-size: 14px; display: block; }
+@media (max-width: 760px) {
+  .process { grid-template-columns: 1fr; gap: 28px; }
+  .process li { padding: 0 0 0 56px; }
+  .process li::after { display: none; }
+}
+
+/* ---------- Problem → solution table ---------- */
+.ps { margin-top: 32px; display: grid; gap: 16px; }
+.ps-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper);
+}
+.ps-row > div { padding: 24px 26px; }
+.ps-row .p { border-right: 1px solid var(--line); }
+.ps-row .s { background: var(--accent-soft); }
+.ps-row h4 { font-size: 16px; margin-bottom: .4em; }
+.ps-row p { font-size: 15px; margin: 0; }
+.ps-row .tag {
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px;
+  display: block; margin-bottom: 6px; color: var(--muted);
+}
+.ps-row .s .tag { color: var(--accent); }
+@media (max-width: 760px) {
+  .ps-row { grid-template-columns: 1fr; }
+  .ps-row .p { border-right: 0; border-bottom: 1px solid var(--line); }
+}
+
+/* ---------- RICE table ---------- */
+.table-wrap { overflow-x: auto; margin-top: 28px; -webkit-overflow-scrolling: touch; }
+table.rice { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; background: var(--paper); }
+table.rice th, table.rice td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--line); }
+table.rice th { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); font-weight: 600; }
+table.rice td:first-child { color: var(--ink); font-weight: 500; }
+
+/* ---------- Personas ---------- */
+.persona .role-tag {
+  display: inline-block; font-size: 12px; font-weight: 600; padding: 4px 10px;
+  border-radius: 99px; background: var(--ink); color: #fff; margin-bottom: 14px;
+}
+.persona ul { padding-left: 18px; margin: 12px 0 0; font-size: 15px; }
+.persona li { margin-bottom: 6px; }
+
+/* ---------- Figures ---------- */
+figure.shot { margin: 40px 0; }
+figure.shot img { display: block; width: 100%; border-radius: var(--radius); border: 1px solid var(--line); }
+figure.shot figcaption { font-size: 14px; color: var(--muted); margin-top: 12px; }
+
+/* Image slot — swap for a real <img> before publishing */
+.slot {
+  aspect-ratio: 16 / 9; border: 2px dashed #c9c9c9; border-radius: var(--radius);
+  display: grid; place-items: center; text-align: center; padding: 24px;
+  color: var(--muted); font-size: 14px; background: repeating-linear-gradient(
+    45deg, transparent, transparent 12px, rgba(0,0,0,.02) 12px, rgba(0,0,0,.02) 24px);
+}
+.slot strong { display: block; color: var(--ink); font-family: 'Montserrat', sans-serif; margin-bottom: 4px; }
+
+/* Content that needs Dana's confirmation — remove class when verified */
+.verify {
+  background: var(--flag-soft); border-left: 4px solid var(--flag);
+  padding: 14px 18px; border-radius: 6px; font-size: 14px; color: #7c2d12; margin: 20px 0;
+}
+.verify::before { content: "Confirm before publishing: "; font-weight: 600; }
+
+/* ---------- Next study ---------- */
+.next {
+  background: var(--ink); color: #fff; padding: 72px 0;
+}
+.next .wrap { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; }
+.next h2 { color: #fff; font-size: 32px; margin: 0; }
+.next .eyebrow { margin-bottom: 8px; }
+.btn {
+  display: inline-block; border: 2px solid #fff; color: #fff !important;
+  padding: 12px 24px; font-weight: 600; font-size: 14px; text-transform: uppercase;
+  letter-spacing: 1px; text-decoration: none; transition: background .2s, color .2s;
+}
+.btn:hover { background: #fff; color: var(--ink) !important; }
+
+.cs-foot { padding: 28px 0; font-size: 14px; color: var(--muted); text-align: center; border-top: 1px solid var(--line); }
+
+/* reveal on scroll */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+@media print {
+  .cs-nav, .toc, .next { display: none; }
+  .reveal { opacity: 1; transform: none; }
+  .verify, .slot { display: none; }
+}
+
+/* ---------- Research quotes ---------- */
+blockquote.card.quote { margin: 0; border-left: 4px solid var(--accent); }
+blockquote.quote p { font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--ink); font-size: 17px; line-height: 1.45; margin: 0 0 14px; }
+blockquote.quote cite { font-style: normal; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+/* ---------- RICE extras ---------- */
+table.rice caption { caption-side: bottom; text-align: left; font-size: 13px; color: var(--muted); padding-top: 12px; }
+table.rice td:not(:first-child), table.rice th:not(:first-child) { text-align: right; }
+.score { display: inline-block; min-width: 52px; text-align: center; padding: 3px 10px; border-radius: 99px; font-weight: 600; font-size: 14px; }
+.s5 { background: #0f766e; color: #fff; }
+.s4 { background: #5eada6; color: #0b2f2c; }
+.s3 { background: #cfe7e4; color: #0b2f2c; }
+.s2 { background: #ececec; color: #333; }
+.s1 { background: #f6f6f6; color: #6f6f6f; }
+
+/* ---------- UI pair ---------- */
+.ui-pair { display: grid; grid-template-columns: 1fr 240px; gap: 32px; align-items: start; margin: 40px 0; }
+.ui-pair .phone img { border-radius: 22px; border: 6px solid #111; }
+@media (max-width: 760px) { .ui-pair { grid-template-columns: 1fr; } .ui-pair .phone { max-width: 260px; margin: 0 auto !important; } }

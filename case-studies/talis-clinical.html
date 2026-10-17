@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talis Clinical Case Study | Dana Shelton</title>
+  <meta name="description" content="0-to-1 clinical decision support and remote patient monitoring platform for ICUs, co-developed with Beth Israel Deaconess Medical Center. Case study by Dana Shelton, Product & Experience Designer.">
+  <meta property="og:title" content="Talis Clinical: Advanced Clinical Guidance | Dana Shelton">
+  <meta property="og:description" content="Designing a 0-to-1 ICU decision support platform that fights alert fatigue and documentation burden.">
+  <link rel="stylesheet" href="../assets/css/case-study.css">
+</head>
+<body class="cs">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="cs-nav" aria-label="Site">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Dana</a>
+      <div class="links">
+        <a href="../index.html">Work</a>
+        <a href="https://www.linkedin.com/in/danasheltondesign" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:1danashelton@gmail.com">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="toc" aria-label="On this page">
+    <a href="#overview">Overview</a>
+    <a href="#problem">Problem</a>
+    <a href="#goals">Goals &amp; metrics</a>
+    <a href="#process">Process</a>
+    <a href="#discover">Discover</a>
+    <a href="#define">Define</a>
+    <a href="#prioritize">Prioritize</a>
+    <a href="#design">Design</a>
+    <a href="#outcomes">Outcomes</a>
+    <a href="#reflection">Reflection</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <header class="cs-hero">
+      <div class="wrap">
+        <span class="eyebrow">Case study · Healthcare · 0 → 1</span>
+        <h1>Getting the right clinical data to the right clinician, for the patient who needs it most</h1>
+        <p class="lede">Talis Clinical: a clinical decision support and remote patient monitoring platform for intensive care units, co-developed with Beth Israel Deaconess Medical Center.</p>
+      </div>
+    </header>
+
+    <!-- ============ SNAPSHOT ============ -->
+    <section class="snapshot" aria-label="Project snapshot">
+      <div class="wrap">
+        <dl>
+          <div><dt>Company</dt><dd>Talis Clinical</dd></div>
+          <div><dt>Client / co-developer</dt><dd>Beth Israel Deaconess Medical Center, Boston</dd></div>
+          <div><dt>My role</dt><dd>First and only UX Designer: research, strategy, UI, design system</dd></div>
+          <div><dt>Team</dt><dd>VP of Product &amp; Founder; Chief Innovation Officer (anesthesiologist); engineering</dd></div>
+          <div><dt>Platform</dt><dd>Responsive web: desktop for nurses, mobile for physicians</dd></div>
+          <div><dt>Timeline</dt><dd>~12 months, discovery through UI and design system</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="cs-section" id="overview">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Overview</span>
+          <h2>A high-acuity product with no spec, and an engineering-led org</h2>
+          <p>Talis set out to replace the EMR software used in Beth Israel Deaconess's ICUs with a platform of clinical decision support tools and remote patient monitoring. The goal was simple to state and hard to build: surface the right information, at the right time, for the patient who needs help most, without adding to clinicians' documentation load or to alarm noise.</p>
+          <p>I joined as the first and only UX designer in the company. I had no medical background, but I had years of design practice and a full stack development certificate, which meant I could reason about the system end to end. I'd never thought of JavaScript as something that could affect life-or-death outcomes. Here, it did.</p>
+          <p>My mandate had two parts: define the product, and shift a predominantly engineering-driven organization toward design thinking. I did the second by landing small wins early and earning buy-in from the top down.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="cs-section alt" id="problem">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Problem</span>
+          <h2>ICU teams were drowning in data and alarms, and still couldn't see who was sickest</h2>
+          <p>Discovery surfaced five interlocking problems. Each one cost clinicians time or attention, the two things an ICU can least afford to lose.</p>
+        </div>
+        <div class="grid grid-3 reveal">
+          <div class="card"><span class="kicker">Visibility</span><h4>No view of who needed help most</h4><p>Nothing ranked patients by acuity or showed whether they were improving or declining.</p></div>
+          <div class="card"><span class="kicker">Staffing</span><h4>1:1 ECMO bedside coverage</h4><p>Every patient on ECMO required a specialist at the bedside, 24/7.</p></div>
+          <div class="card"><span class="kicker">Consistency</span><h4>Inconsistent care practices</h4><p>Teams duplicated effort or missed steps in care plans.</p></div>
+          <div class="card"><span class="kicker">Attention</span><h4>Alert fatigue</h4><p>Alarms fired so often that staff learned to tune them out like white noise.</p></div>
+          <div class="card"><span class="kicker">Time</span><h4>Documentation fatigue</h4><p>For every 15 minutes with a patient, physicians spent 2–3× that documenting.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GOALS & METRICS ============ -->
+    <section class="cs-section" id="goals">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Goals &amp; success metrics</span>
+          <h2>Define success before designing anything</h2>
+          <p>In a clinical setting, "the UI looks better" is not a measure. I tied each problem to a metric we could track once the platform was live, so design debates could be settled against outcomes rather than opinions.</p>
+        </div>
+        <div class="grid grid-4 reveal">
+          <div class="card metric"><span class="num">1:12</span><h4>ECMO specialist ratio</h4><p>Target, up from 1:1, enabled by remote monitoring.</p></div>
+          <div class="card metric"><span class="num">↓ <small>time</small></span><h4>Documentation time</h4><p>Fewer manual fields per flowsheet; less time per encounter spent charting.</p></div>
+          <div class="card metric"><span class="num">↓ <small>alarms</small></span><h4>Alarm volume per clinician</h4><p>Fewer non-actionable alerts reaching each person.</p></div>
+          <div class="card metric"><span class="num">↑ <small>adherence</small></span><h4>Care-plan completion</h4><p>Checklist steps completed without duplication.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="cs-section alt" id="process">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Process</span>
+          <h2>How the work moved</h2>
+          <p>Not strictly linear: participatory workshops with clinicians continued through design, and findings looped back into the roadmap.</p>
+        </div>
+        <ol class="process reveal">
+          <li><strong>Discover</strong><span>Guerrilla interviews, 4-day ICU site visit, contextual observation</span></li>
+          <li><strong>Define</strong><span>12 roles mapped, 4 personas, 2 priority users, pain points</span></li>
+          <li><strong>Prioritize</strong><span>Blue-sky feature list scored with RICE to set the MVP</span></li>
+          <li><strong>Design</strong><span>Whiteboarding, participatory workshops, responsive UI</span></li>
+          <li><strong>Systematize</strong><span>Design system as single source of truth for engineering</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ DISCOVER ============ -->
+    <section class="cs-section" id="discover">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">01 · Discover</span>
+          <h2>Building empathy fast, then going to the bedside</h2>
+          <h3>Guerrilla research for a baseline</h3>
+          <p>Before we had a customer contract, I interviewed friends and family working in healthcare about their daily friction with hospital technology. It was a low-cost way to learn the vocabulary and the shape of the problem.</p>
+          <h3>Four days in the ICU</h3>
+          <p>Once the co-development contract with Beth Israel Deaconess was signed, I traveled onsite and spent four days observing ICU workflows and interviewing clinicians in context. Watching a nurse chart vitals that a monitor two feet away had already captured taught me more than any requirements doc could.</p>
+          <h3>Participatory design throughout</h3>
+          <p>I led workshops with stakeholders and clinical user groups during development, so the people who would live with the product helped shape it.</p>
+        </div>
+        <h3 class="read reveal">In their words</h3>
+        <div class="grid grid-3 reveal">
+          <blockquote class="card quote"><p>"I need to know what is preventing the patient from leaving the ICU <em>today</em>, not why they came in 54 days ago."</p><cite>ICU attending, anesthesiologist</cite></blockquote>
+          <blockquote class="card quote"><p>"You've got 9 people looking at 9 different screens and they will tell you 9 different things from the same huddle."</p><cite>NICU nurse</cite></blockquote>
+          <blockquote class="card quote"><p>"If there was a fire, they would save that binder before packing up any babies."</p><cite>NICU nurse, on paper workarounds</cite></blockquote>
+        </div>
+        <figure class="shot reveal">
+          <img src="../assets/img/talis/whiteboard-platform-pillars.jpg" alt="Whiteboard listing platform themes: data normalization, outcomes monitoring, guidance share/store/tag, building blocks, pattern building and suggestions" loading="lazy" width="1600" height="778">
+          <figcaption>Synthesizing research into platform themes: data normalization, outcomes monitoring, shareable guidance, and reusable building blocks.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ DEFINE ============ -->
+    <section class="cs-section alt" id="define">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">02 · Define</span>
+          <h2>Twelve possible users. Two that mattered first.</h2>
+          <p>We identified twelve user roles. I built four personas to guide the next year of work, then we narrowed MVP focus to the two that drive the data loop: <strong>nurses generate data, physicians consume it.</strong> That split decided the platform strategy.</p>
+        </div>
+        <div class="grid grid-2 reveal">
+          <div class="card persona">
+            <span class="role-tag">Nurse · Desktop</span>
+            <h4>Primary data generator</h4>
+            <p>Charts continuously at the bedside workstation.</p>
+            <ul>
+              <li>Wants integrated systems so she never re-enters the same data in multiple places</li>
+              <li>Wants reminders for fluid changes, meds, and feedings, especially when picking up where someone else left off</li>
+              <li>Data entry on mobile is cumbersome, so her experience is desktop-first</li>
+            </ul>
+          </div>
+          <div class="card persona">
+            <span class="role-tag">Physician · Mobile</span>
+            <h4>Primary data consumer</h4>
+            <p>Moves between units; feels responsible for ~40 patients at once.</p>
+            <ul>
+              <li>Starts every shift with four questions: Who is sick? Who is stable? Who needs follow-up? What fires need putting out?</li>
+              <li>Wants a comprehensive patient list sorted by acuity, with recent data, notes, and labs summarized</li>
+              <li>Skeptical of new tools, including ours, so trust had to be earned</li>
+            </ul>
+          </div>
+        </div>
+        <p class="read reveal" style="margin-top:24px;font-size:15px">Four personas in total: SICU attending, ICU anesthesiologist/intensivist, NICU resident, and NICU nurse. Names and photos are omitted to protect participants.</p>
+        <h3 class="reveal">From pain point to product response</h3>
+        <div class="ps reveal">
+          <div class="ps-row">
+            <div class="p"><span class="tag">Pain point</span><h4>Can't tell who is sickest</h4><p>No ranking by acuity or trajectory.</p></div>
+            <div class="s"><span class="tag">Design response</span><h4>Re-sorting patient list</h4><p>Ranks patients by acuity <em>and</em> momentum, whether they're improving or regressing, from bedside data.</p></div>
+          </div>
+          <div class="ps-row">
+            <div class="p"><span class="tag">Pain point</span><h4>1:1 ECMO coverage</h4><p>A specialist tied to every ECMO bedside, 24/7.</p></div>
+            <div class="s"><span class="tag">Design response</span><h4>Remote monitoring</h4><p>One specialist oversees up to 12 ECMO patients remotely.</p></div>
+          </div>
+          <div class="ps-row">
+            <div class="p"><span class="tag">Pain point</span><h4>Inconsistent practice</h4><p>Duplicated effort and missed care-plan steps.</p></div>
+            <div class="s"><span class="tag">Design response</span><h4>Process-control checklists</h4><p>Shared checklists keep the whole care team on the same step.</p></div>
+          </div>
+          <div class="ps-row">
+            <div class="p"><span class="tag">Pain point</span><h4>Alert fatigue</h4><p>Every alarm sounds the same, so none get heard.</p></div>
+            <div class="s"><span class="tag">Design response</span><h4>Targeted, escalating alerts</h4><p>Alerts route to the right person and escalate only as needed. Clinicians stay in control to snooze, dismiss, or mute.</p></div>
+          </div>
+          <div class="ps-row">
+            <div class="p"><span class="tag">Pain point</span><h4>Documentation fatigue</h4><p>2–3× encounter time spent charting.</p></div>
+            <div class="s"><span class="tag">Design response</span><h4>Pre-populated flowsheets</h4><p>Pull data the monitors already generate into flowsheets, cutting required fields and re-entry.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRIORITIZE ============ -->
+    <section class="cs-section" id="prioritize">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">03 · Prioritize</span>
+          <h2>From blue-sky list to MVP with RICE</h2>
+          <p>We started with an unconstrained feature list, then I scored every idea on <strong>Reach, Impact, Confidence, and Effort</strong>. RICE turned debates between product, clinical, and engineering leads into a shared, transparent ranking: most impact for the least development time.</p>
+        </div>
+        <div class="grid grid-4 reveal">
+          <div class="card"><span class="kicker">R</span><h4>Reach</h4><p>How many clinicians or patients it touches per shift.</p></div>
+          <div class="card"><span class="kicker">I</span><h4>Impact</h4><p>Effect on patient safety, time, or attention.</p></div>
+          <div class="card"><span class="kicker">C</span><h4>Confidence</h4><p>Strength of research evidence behind the estimate.</p></div>
+          <div class="card"><span class="kicker">E</span><h4>Effort</h4><p>Engineering cost to deliver, including integrations.</p></div>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="rice">
+            <caption>Feature scores. Score = (Reach × Impact × Confidence) ÷ Effort.</caption>
+            <thead><tr><th scope="col">Feature</th><th scope="col">Reach<br>(1–500)</th><th scope="col">Impact<br>(1–3)</th><th scope="col">Confidence</th><th scope="col">Effort<br>(days)</th><th scope="col">Score</th></tr></thead>
+            <tbody>
+              <tr><td>Alert severity</td><td>500</td><td>2</td><td>80%</td><td>2</td><td><span class="score s5">400</span></td></tr>
+              <tr><td>Care plan</td><td>350</td><td>3</td><td>100%</td><td>3</td><td><span class="score s5">350</span></td></tr>
+              <tr><td>Resorting patient list</td><td>500</td><td>3</td><td>100%</td><td>5</td><td><span class="score s5">300</span></td></tr>
+              <tr><td>Body widget</td><td>300</td><td>3</td><td>100%</td><td>3</td><td><span class="score s5">300</span></td></tr>
+              <tr><td>Smart search</td><td>500</td><td>3</td><td>100%</td><td>5</td><td><span class="score s5">300</span></td></tr>
+              <tr><td>Momentum</td><td>500</td><td>2</td><td>100%</td><td>7</td><td><span class="score s4">143</span></td></tr>
+              <tr><td>Huddle tools</td><td>250</td><td>2</td><td>50%</td><td>3</td><td><span class="score s3">83</span></td></tr>
+              <tr><td>Personalized dashboard</td><td>500</td><td>3</td><td>80%</td><td>21</td><td><span class="score s3">57</span></td></tr>
+              <tr><td>Patient handoff</td><td>250</td><td>2</td><td>75%</td><td>7</td><td><span class="score s3">54</span></td></tr>
+              <tr><td>Contextual role-based views</td><td>500</td><td>3</td><td>100%</td><td>30</td><td><span class="score s2">50</span></td></tr>
+              <tr><td>Guidance blocks / templates</td><td>200</td><td>3</td><td>80%</td><td>10</td><td><span class="score s2">48</span></td></tr>
+              <tr><td>Templated notes</td><td>250</td><td>3</td><td>90%</td><td>30</td><td><span class="score s1">23</span></td></tr>
+              <tr><td>Scorecard reporting</td><td>500</td><td>1</td><td>50%</td><td>14</td><td><span class="score s1">18</span></td></tr>
+              <tr><td>Care team chat</td><td>250</td><td>1</td><td>60%</td><td>21</td><td><span class="score s1">7</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="read reveal" style="margin-top:24px">The ranking made trade-offs visible. Momentum and contextual role-based views scored top marks for reach and impact but carried real build cost, which dropped them down the list. Care team chat scored last: low impact and low confidence it would change outcomes.</p>
+      </div>
+    </section>
+
+    <!-- ============ DESIGN ============ -->
+    <section class="cs-section alt" id="design">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">04 · Design</span>
+          <h2>Whiteboard, workshop, then one component library for every app</h2>
+          <h3>Whiteboarding as a shared language</h3>
+          <p>Whiteboarding was our working medium for design patterns, business goals, user flows, and brainstorming, and the fastest way to get engineers and clinicians reasoning about the same picture.</p>
+        </div>
+        <figure class="shot reveal">
+          <img src="../assets/img/talis/whiteboard-flows.jpg" alt="Two whiteboards covered in patient view wireframes, vital sign trend sketches and annotation notes" loading="lazy" width="1600" height="1200">
+          <figcaption>Working sessions mapping the patient view, trends, and annotations with engineering and clinical leads.</figcaption>
+        </figure>
+        <div class="grid grid-2 reveal">
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/whiteboard-patient-view.jpg" alt="Whiteboard sketch of a single patient screen with vitals timeline, alerts and color-coded annotations" loading="lazy" width="900" height="1200"><figcaption>Single-patient view: vitals timeline, alerts, and actions.</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/whiteboard-actions-menu.jpg" alt="Whiteboard sketch of an add menu: add guidance for all patients, one patient or other, add addendum, reminder, appointment, document, order" loading="lazy" width="900" height="1200"><figcaption>Quick-action menu: guidance scoped to one patient or all, plus reminders, documents, and orders.</figcaption></figure>
+        </div>
+        <div class="read reveal">
+          <h3>Responsive by design, not by retrofit</h3>
+          <p>I built the UI on a standard 12-column Bootstrap grid so the same components could serve the nurse desktop and physician mobile views, and every future app on the platform, without being rebuilt.</p>
+          <h3>A design system as single source of truth</h3>
+          <p>As components stabilized, I documented them in a design system that engineers used as the reference for implementation. Being a developer myself meant I could spec components in terms the team could build directly.</p>
+        </div>
+        <p class="pull reveal">Understand the problem so well that the solution becomes obvious.</p>
+        <div class="ui-pair reveal">
+          <figure class="shot" style="margin:0">
+            <img src="../assets/img/talis/ui-pain-assessment.jpg" alt="Desktop pain assessment screen with a body diagram marking right deltoid and left knee, tabs for assessment scales and clinical sections" loading="lazy" width="1335" height="1050">
+            <figcaption>Desktop: the body widget (a top RICE scorer) inside a pain assessment, with tabs for each clinical scale.</figcaption>
+          </figure>
+          <figure class="shot phone" style="margin:0">
+            <img src="../assets/img/talis/ui-mobile-patient.jpg" alt="Mobile patient screen showing vitals, ventilator values, a P/F ratio gauge and recent guidance alerts for protective lung ventilation" loading="lazy" width="280" height="606">
+            <figcaption>Mobile: vitals at a glance, then guidance alerts ranked by recency. Test data shown.</figcaption>
+          </figure>
+        </div>
+        <h3 class="read reveal">Design system components</h3>
+        <div class="grid grid-3 reveal">
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-text-fields.jpg" alt="Design system sheet of text field states: default, focused, filled, error and disabled" loading="lazy" width="700" height="1283"><figcaption>Text fields and states</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-selection-controls.jpg" alt="Design system sheet of checkboxes, radio buttons and switches in each state" loading="lazy" width="700" height="1283"><figcaption>Selection controls</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-cards.jpg" alt="Design system sheet of card layouts, including vital sign tiles, a pressure gauge and the body widget" loading="lazy" width="700" height="1283"><figcaption>Cards, vital tiles, and the body widget</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUTCOMES ============ -->
+    <section class="cs-section" id="outcomes">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Outcomes</span>
+          <h2>What changed</h2>
+        </div>
+        <div class="grid grid-3 reveal">
+          <div class="card metric"><span class="num">1 → 12</span><h4>ECMO patients per specialist</h4><p>Remote monitoring designed to raise coverage from 1:1 to 1:12.</p></div>
+          <div class="card metric"><span class="num">2</span><h4>Apps from one system</h4><p>Desktop and mobile experiences built from a single shared component library.</p></div>
+          <div class="card metric"><span class="num">0 → 1</span><h4>Design practice established</h4><p>First UX hire; moved an engineering-led company toward design thinking.</p></div>
+        </div>
+        <div class="read reveal">
+          <div class="verify">Add what shipped and any measured results (documentation time, alarm volume, adoption, clinician feedback). If the ECMO ratio was achieved or piloted, change "designed to raise" to the actual result.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REFLECTION ============ -->
+    <section class="cs-section alt" id="reflection">
+      <div class="wrap">
+        <div class="read reveal">
+          <span class="section-label">Reflection</span>
+          <h2>What I'd carry into any complex, regulated product</h2>
+          <h3>Domain expertise can be borrowed; observation can't</h3>
+          <p>Four days at the bedside outperformed months of secondhand requirements. In complex enterprise tools, I go to where the work happens.</p>
+          <h3>Fewer, smarter signals beat more data</h3>
+          <p>The hardest design decisions were about what <em>not</em> to show or sound. Respecting expert attention is the core of any high-stakes workstation.</p>
+          <h3>Build the system, not just the screens</h3>
+          <p>A shared grid and design system let a small team support two platforms and future apps without redesigning each one.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ NEXT ============ -->
+  <section class="next" aria-label="More work">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">More work</span>
+        <h2>See more case studies</h2>
+      </div>
+      <a class="btn" href="../index.html">Back to all work</a>
+    </div>
+  </section>
+
+  <footer class="cs-foot">
+    <div class="wrap">Dana Shelton · Product &amp; Experience Designer · Enterprise UX, AI-enabled systems, regulated platforms</div>
+  </footer>
+
+  <script>
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { rootMargin: '0px 0px -10% 0px' });
+      els.forEach(function (e) { io.observe(e); });
+
+      var links = document.querySelectorAll('.toc a');
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            links.forEach(function (l) { l.classList.toggle('is-active', l.getAttribute('href') === '#' + en.target.id); });
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      links.forEach(function (l) { var t = document.querySelector(l.getAttribute('href')); if (t) spy.observe(t); });
+    })();
+  </script>
+</body>
+</html>
