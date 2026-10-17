@@ -19,6 +19,8 @@
     .flow > div:last-child .tag { color: var(--accent); }
     .flow p { font-size: 15px; margin: 0; }
     @media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .flow > div { border-right: 0; border-bottom: 1px solid var(--line); } }
+    .btn-dark { border-color: var(--ink); color: var(--ink) !important; }
+    .btn-dark:hover { background: var(--ink); color: #fff !important; }
     .awards { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 12px; }
     .awards li { padding: 16px 20px; border-left: 4px solid var(--accent); background: var(--paper-alt); border-radius: 6px; color: var(--ink); font-weight: 500; }
   </style>
@@ -202,10 +204,7 @@
           <h3>Live tracking, honestly real time</h3>
           <p>The truck moves on the map as it drives. We were the first in the industry to offer it, and the first team at Nationwide to ship WebSockets: real-time push instead of polling. That's the only reason a live countdown could be honest rather than approximate. A 15-minute anxiety threshold can't be solved by a screen that refreshes when you open it. The research finding set the technical requirement, not the other way around, and design and engineering scoped it together from the same canvas.</p>
         </div>
-        <div class="video reveal">
-          <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PL2_V1PTaMDyTt2YTuccd6X2nYLwwFpLNO" title="Roadside assistance prototype walkthrough videos" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <p class="read reveal" style="font-size:14px;color:var(--muted)">Prototype walkthroughs of the redesigned request and tracking flow.</p>
+        <p class="reveal" style="margin:32px 0 0"><a class="btn btn-dark" href="https://www.youtube.com/playlist?list=PL2_V1PTaMDyTt2YTuccd6X2nYLwwFpLNO" target="_blank" rel="noopener">Watch the prototype walkthroughs ↗</a></p>
         <p class="pull reveal">We can't control when help will arrive. But we can tell you everything we do know, the moment we know it.</p>
       </div>
     </section>
