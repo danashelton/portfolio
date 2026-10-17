@@ -21,6 +21,9 @@
     @media (max-width: 760px) { .flow { grid-template-columns: 1fr; } .flow > div { border-right: 0; border-bottom: 1px solid var(--line); } }
     .btn-dark { border-color: var(--ink); color: var(--ink) !important; }
     .btn-dark:hover { background: var(--ink); color: #fff !important; }
+    blockquote.review { margin: 28px 0; padding: 28px 32px; background: var(--paper-alt); border-left: 4px solid var(--accent); border-radius: 6px; }
+    blockquote.review p { color: var(--ink); font-size: 16px; line-height: 1.65; margin: 0 0 14px; }
+    blockquote.review cite { font-style: normal; font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
     .awards { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 12px; }
     .awards li { padding: 16px 20px; border-left: 4px solid var(--accent); background: var(--paper-alt); border-radius: 6px; color: var(--ink); font-weight: 500; }
   </style>
@@ -83,9 +86,17 @@
         <div class="read reveal">
           <span class="section-label">Overview</span>
           <h2>It started with an app store review I couldn't put down</h2>
-          <p>During onboarding in December 2021, I came across a review from a customer who had requested roadside help through our app on a night when it was −8°F. He was told the driver had arrived. Nobody came. A text said he'd wait 133 minutes. He was a Black man stranded on a Minnesota roadside at night, and asking strangers for help carried real risk. It was the second time this had happened to him.</p>
+          <p>During onboarding in December 2021, I came across this review of our app:</p>
+          <blockquote class="review">
+            <p>"Tonight I found out what kind of company I am dealing with. I called for roadside assistance thru this app, and I was informed by phone calls that the driver was at my location, but he never actually showed up.</p>
+            <p>I received a text stating that I would have to wait 133 minutes. I called and spoke with a live person, who essentially blew a bunch of smoke.</p>
+            <p>As a Black man in Minnesota, standing on the side of the road in -8 degree temperatures, asking for a jump went about as well as could be expected. I called 911, who sent out a crisis intervention team to give me a jump so I could get home, but THANK GOD she didn't send the police.</p>
+            <p>This is the second time (Company) has done this to me! Last year when this happened the temp was -10.</p>
+            <p>You get your $197.00 every month but it seems like when I need any assistance, I can't get it from (You). Thank you sincerely from the bottom of my heart. Oh believe me I will be sharing this story online. And thank you once again... grade A service."</p>
+            <cite>Mobile app feedback, December 2021</cite>
+          </blockquote>
           <p>He could have frozen, been poisoned by carbon monoxide, or been hit by another vehicle, all because he stayed with his disabled car believing help was coming.</p>
-          <p>The tow itself wasn't the failure. The failure was that we left a customer guessing, on the side of the road, in a situation that was dangerous in more ways than one. Every minute of silence extended his exposure: to the cold, and to how a roadside encounter could go. I turned that review into a proposal, socialized it with product and senior leadership, and then owned the redesign end to end. It became the first feature built on Nationwide's new design system.</p>
+          <p>The tow itself wasn't the failure. The failure was that we left a customer guessing, on the side of the road, in a situation that was dangerous in more ways than one. Every minute of silence extended his exposure: to the cold, and to how a roadside encounter could go for him. I turned that review into a proposal, socialized it with product and senior leadership, and then owned the redesign end to end. It became the first feature built on Nationwide's new design system.</p>
         </div>
       </div>
     </section>
