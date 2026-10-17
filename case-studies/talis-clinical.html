@@ -264,8 +264,8 @@
           <figcaption>Working sessions mapping the patient view, trends, and annotations with engineering and clinical leads.</figcaption>
         </figure>
         <div class="grid grid-2 reveal">
-          <figure class="shot" style="margin:0"><img src="../assets/img/talis/whiteboard-patient-view.jpg" alt="Whiteboard sketch of a single patient screen with vitals timeline, alerts and color-coded annotations" loading="lazy" width="900" height="1200"><figcaption>Single-patient view: vitals timeline, alerts, and actions.</figcaption></figure>
-          <figure class="shot" style="margin:0"><img src="../assets/img/talis/whiteboard-actions-menu.jpg" alt="Whiteboard sketch of an add menu: add guidance for all patients, one patient or other, add addendum, reminder, appointment, document, order" loading="lazy" width="900" height="1200"><figcaption>Quick-action menu: guidance scoped to one patient or all, plus reminders, documents, and orders.</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/whiteboard-patient-view.jpg" alt="Whiteboard sketch of a single patient screen with vitals timeline, alerts and color-coded annotations" loading="lazy" width="1500" height="2000"><figcaption>Single-patient view: vitals timeline, alerts, and actions.</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/whiteboard-actions-menu.jpg" alt="Whiteboard sketch of an add menu: add guidance for all patients, one patient or other, add addendum, reminder, appointment, document, order" loading="lazy" width="1200" height="1600"><figcaption>Quick-action menu: guidance scoped to one patient or all, plus reminders, documents, and orders.</figcaption></figure>
         </div>
         <div class="read reveal">
           <h3>Responsive by design, not by retrofit</h3>
@@ -286,9 +286,9 @@
         </div>
         <h3 class="read reveal">Design system components</h3>
         <div class="grid grid-3 reveal">
-          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-text-fields.jpg" alt="Design system sheet of text field states: default, focused, filled, error and disabled" loading="lazy" width="700" height="1283"><figcaption>Text fields and states</figcaption></figure>
-          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-selection-controls.jpg" alt="Design system sheet of checkboxes, radio buttons and switches in each state" loading="lazy" width="700" height="1283"><figcaption>Selection controls</figcaption></figure>
-          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-cards.jpg" alt="Design system sheet of card layouts, including vital sign tiles, a pressure gauge and the body widget" loading="lazy" width="700" height="1283"><figcaption>Cards, vital tiles, and the body widget</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-text-fields.jpg" alt="Design system sheet of text field states: default, focused, filled, error and disabled" loading="lazy" width="1080" height="1980"><figcaption>Text fields and states</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-selection-controls.jpg" alt="Design system sheet of checkboxes, radio buttons and switches in each state" loading="lazy" width="1080" height="1980"><figcaption>Selection controls</figcaption></figure>
+          <figure class="shot" style="margin:0"><img src="../assets/img/talis/ds-cards.jpg" alt="Design system sheet of card layouts, including vital sign tiles, a pressure gauge and the body widget" loading="lazy" width="1080" height="1980"><figcaption>Cards, vital tiles, and the body widget</figcaption></figure>
         </div>
       </div>
     </section>
@@ -361,6 +361,28 @@
         });
       }, { rootMargin: '-45% 0px -50% 0px' });
       links.forEach(function (l) { var t = document.querySelector(l.getAttribute('href')); if (t) spy.observe(t); });
+      // tap to enlarge
+      var dlg = document.createElement('dialog');
+      dlg.className = 'lightbox';
+      dlg.setAttribute('aria-label', 'Enlarged image');
+      dlg.innerHTML = '<button class="lightbox-close" type="button" aria-label="Close">&times;</button><p class="lightbox-cap"></p><div class="lightbox-scroll"><img alt=""></div>';
+      document.body.appendChild(dlg);
+      var big = dlg.querySelector('img'), box = dlg.querySelector('.lightbox-scroll'), cap = dlg.querySelector('.lightbox-cap');
+      dlg.querySelector('.lightbox-close').addEventListener('click', function () { dlg.close(); });
+      dlg.addEventListener('click', function (e) { if (e.target === box) dlg.close(); });
+      big.addEventListener('click', function () { box.classList.toggle('is-full'); });
+      dlg.addEventListener('close', function () { box.classList.remove('is-full'); document.body.style.overflow = ''; });
+      document.querySelectorAll('figure.shot img').forEach(function (img) {
+        var btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'zoomable';
+        btn.setAttribute('aria-label', 'Enlarge image: ' + img.alt);
+        img.parentNode.insertBefore(btn, img); btn.appendChild(img);
+        btn.addEventListener('click', function () {
+          big.src = img.currentSrc || img.src; big.alt = img.alt;
+          var fc = btn.closest('figure').querySelector('figcaption'); cap.textContent = fc ? fc.textContent : '';
+          document.body.style.overflow = 'hidden'; dlg.showModal();
+        });
+      });
     })();
   </script>
 </body>
