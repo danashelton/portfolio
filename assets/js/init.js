@@ -50,6 +50,11 @@ $(function () {
 
 		if (bodyScroll > 500) {
 
+			$('#bar1').barfiller({
+				// duration in ms
+				duration: 2200
+			});
+
 			$('#bar2').barfiller({
 				// duration in ms
 				duration: 2000
