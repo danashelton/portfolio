@@ -1130,11 +1130,5 @@ nav.fixed-top .nav-item .nav-link:before {
 	font-weight: 400;
 	letter-spacing: 1px;
 }
-/* UX disciplines heading + tighter spacing for the longer list */
-.dana-about-area .skills-prog .skills-title {
-	font-size: 22px;
-	font-weight: 700;
-	color: #222;
-	margin: 0 0 28px;
-}
+/* tighter spacing for the longer UX disciplines list */
 .dana-about-area .skills-prog .barfiller { margin-bottom: 24px; }
