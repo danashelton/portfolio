@@ -1138,3 +1138,22 @@ nav.fixed-top .nav-item .nav-link:before {
 @media (min-width: 768px) {
 	.dana-about-area .skills-prog.half { margin-top: 44px; }
 }
+
+/* UX case study cards in Recent Work */
+.dana-work-area .item-content .item-img-overlay .cap-sub {
+	color: #555;
+	font-size: 13px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin: -8px 0 14px;
+}
+.cs-link>a {
+	background: #111 none repeat scroll 0 0;
+	border-radius: 50%;
+	color: #fff;
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	width: 40px;
+}
