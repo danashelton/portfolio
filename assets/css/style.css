@@ -1166,7 +1166,7 @@ nav.fixed-top .nav-item .nav-link:before {
 /* primary button on the UX service card */
 .single-service .service-btn { margin-top: 20px; }
 /* keep What I Do cards equal height in each row */
-.dana-service-area .row:has(.single-service) { display: flex; flex-wrap: wrap; }
+.dana-service-area .row:has(.single-service) { display: flex; flex-wrap: wrap; justify-content: center; }
 .dana-service-area .row:has(.single-service) > [class*="col-"] { display: flex; }
 .dana-service-area .single-service { width: 100%; }
 
