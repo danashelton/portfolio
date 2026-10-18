@@ -50,10 +50,44 @@ $(function () {
 
 		if (bodyScroll > 500) {
 
-			$('.skills-prog .barfiller').each(function (i) {
-				if (!$(this).data('filled')) {
-					$(this).data('filled', true).barfiller({ duration: 2000 - i * 150 });
-				}
+			$('#bar2').barfiller({
+				// duration in ms
+				duration: 2000
+			});
+
+			$('#bar3').barfiller({
+				// duration in ms
+				duration: 1800
+			});
+
+			$('#bar4').barfiller({
+				// duration in ms
+				duration: 1600
+			});
+
+			$('#bar5').barfiller({
+				// duration in ms
+				duration: 1400
+			});
+
+			$('#bar6').barfiller({
+				// duration in ms
+				duration: 1200
+			});
+
+			$('#bar7').barfiller({
+				// duration in ms
+				duration: 1000
+			});
+
+			$('#bar8').barfiller({
+				// duration in ms
+				duration: 900
+			});
+
+			$('#bar9').barfiller({
+				// duration in ms
+				duration: 800
 			});
 		}
 
