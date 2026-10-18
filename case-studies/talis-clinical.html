@@ -8,7 +8,11 @@
   <meta property="og:title" content="Talis Clinical: Advanced Clinical Guidance | Dana Shelton">
   <meta property="og:description" content="Designing a 0-to-1 ICU decision support platform that fights alert fatigue and documentation burden.">
   <link rel="stylesheet" href="../assets/css/case-study.css">
-  <style>:root { --accent: #000a3e; --accent-soft: #e6e8f2; }</style>
+  <style>
+    :root { --accent: #000a3e; --accent-soft: #e6e8f2; }
+    .video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: #111; margin: 32px 0 12px; }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  </style>
 </head>
 <body class="cs">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -290,6 +294,14 @@
             <figcaption>Mobile, COVID-19 configuration: ventilator values at a glance, then protective lung ventilation guidance alerts. Test data shown.</figcaption>
           </figure>
         </div>
+        <div class="read reveal">
+          <h3>"It can't be done." So I built it.</h3>
+          <p>The body widget scored among the highest in our RICE ranking, but engineering said it couldn't be built. Instead of cutting it, I coded it myself. Clinicians tap the body diagram to mark exactly where a patient is in pain, and the assessment records it.</p>
+        </div>
+        <div class="video reveal">
+          <iframe src="https://www.youtube-nocookie.com/embed/Tpf7ap210jo?rel=0" title="Talis body widget demo, coded by Dana Shelton" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+        </div>
+        <p class="read reveal" style="font-size:14px;color:var(--muted)">Demo of the working body widget I coded.</p>
         <h3 class="read reveal">ECMO app screens</h3>
         <p class="read reveal">Designed in summer 2019. Tap a screen to see the full scrolling page.</p>
         <div class="phones reveal">
