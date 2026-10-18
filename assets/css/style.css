@@ -1162,3 +1162,10 @@ nav.fixed-top .nav-item .nav-link:before {
 .about_btns .dana-btn + .dana-btn { margin-left: 10px; }
 .dana-btn-outline { background: transparent; color: #212121; }
 .dana-btn-outline:hover { background: #212121; color: #fff; }
+
+/* primary button on the UX service card */
+.single-service .service-btn { margin-top: 20px; }
+/* keep What I Do cards equal height in each row */
+.dana-service-area .row:has(.single-service) { display: flex; flex-wrap: wrap; }
+.dana-service-area .row:has(.single-service) > [class*="col-"] { display: flex; }
+.dana-service-area .single-service { width: 100%; }
