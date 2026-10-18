@@ -9,6 +9,12 @@
   <meta property="og:description" content="Three products, one way of working: find the real person, name the real constraint, and prove the change.">
   <link rel="stylesheet" href="../assets/css/case-study.css">
   <style>
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 56px; align-items: center; }
+    .headshot { width: 260px; height: 260px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(255,255,255,.15); }
+    @media (max-width: 860px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .headshot { order: -1; width: 128px; height: 128px; }
+    }
     .studies { display: grid; gap: 40px; margin-top: 8px; }
     .study {
       display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 0;
@@ -57,10 +63,13 @@
 
   <main id="main">
     <header class="cs-hero">
-      <div class="wrap">
-        <span class="eyebrow" style="color:#d6d6d6">Case studies</span>
-        <h1>Find the real person. Name the real constraint. Prove the change.</h1>
-        <p class="lede">I'm Dana Shelton, a product and experience designer. These three studies cover an ICU monitoring platform, a flagship insurance app, and a marketplace I founded. Each one follows the same structure, so you can compare how I work from problem to outcome.</p>
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow" style="color:#d6d6d6">Case studies</span>
+          <h1>Find the real person. Name the real constraint. Prove the change.</h1>
+          <p class="lede">I'm Dana Shelton, a product and experience designer. These three studies cover an ICU monitoring platform, a flagship insurance app, and a marketplace I founded. Each one follows the same structure, so you can compare how I work from problem to outcome.</p>
+        </div>
+        <img class="headshot" src="../assets/img/dana-headshot.jpg" alt="Dana Shelton" width="1080" height="1080">
       </div>
     </header>
 
