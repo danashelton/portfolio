@@ -556,6 +556,7 @@ nav.fixed-top .nav-item .nav-link:before {
 	font-size: 26px;
 	font-weight: 600;
 	letter-spacing: 1px;
+	line-height: 1.2;
 	margin-bottom: 10px;
 }
 
@@ -1132,3 +1133,8 @@ nav.fixed-top .nav-item .nav-link:before {
 }
 /* tighter spacing for the longer UX disciplines list */
 .dana-about-area .skills-prog .barfiller { margin-bottom: 24px; }
+/* line up the first bar label with the first line of the intro paragraph:
+   h2 31.2px + 10px margin + p half-leading 4.2px - h6 half-leading 1.4px = 44px */
+@media (min-width: 768px) {
+	.dana-about-area .skills-prog.half { margin-top: 44px; }
+}
