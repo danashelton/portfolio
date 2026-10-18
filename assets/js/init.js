@@ -50,24 +50,10 @@ $(function () {
 
 		if (bodyScroll > 500) {
 
-			$('#bar2').barfiller({
-				// duration in ms
-				duration: 2000
-			});
-
-			$('#bar3').barfiller({
-				// duration in ms
-				duration: 1600
-			});
-
-			$('#bar4').barfiller({
-				// duration in ms
-				duration: 1200
-			});
-
-			$('#bar5').barfiller({
-				// duration in ms
-				duration: 800
+			$('.skills-prog .barfiller').each(function (i) {
+				if (!$(this).data('filled')) {
+					$(this).data('filled', true).barfiller({ duration: 2000 - i * 150 });
+				}
 			});
 		}
 
