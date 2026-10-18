@@ -1169,3 +1169,11 @@ nav.fixed-top .nav-item .nav-link:before {
 .dana-service-area .row:has(.single-service) { display: flex; flex-wrap: wrap; }
 .dana-service-area .row:has(.single-service) > [class*="col-"] { display: flex; }
 .dana-service-area .single-service { width: 100%; }
+
+/* hero calls to action */
+.hero-ctas { margin-top: 36px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero-ctas .dana-btn { padding: 14px 28px; font-size: 14px; }
+.hero-btn-primary { background: #fff; border-color: #fff; color: #111 !important; }
+.hero-btn-primary:hover { background: transparent; color: #fff !important; }
+.hero-btn-secondary { background: transparent; border-color: #fff; color: #fff !important; }
+.hero-btn-secondary:hover { background: #fff; color: #111 !important; }
