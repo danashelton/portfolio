@@ -55,6 +55,11 @@ $(function () {
 				duration: 2200
 			});
 
+			$('#bar10').barfiller({
+				// duration in ms
+				duration: 2100
+			});
+
 			$('#bar2').barfiller({
 				// duration in ms
 				duration: 2000
