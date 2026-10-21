@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en-US">
    <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NLXV968MY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9NLXV968MY');
+</script>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -839,6 +848,16 @@
       <script src="assets/js/init.js?v=4"></script>
       <!--Main js-->
       <script src="assets/js/main.js"></script>
-   </body>
+   <!-- Analytics events: resume downloads and contact form sends -->
+<script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="Resume"][href$=".pdf"]');
+    if (a && window.gtag) gtag('event', 'resume_download', { link_url: a.href, transport_type: 'beacon' });
+  });
+  document.addEventListener('submit', function (e) {
+    if (window.gtag) gtag('event', 'contact_form_submit', { transport_type: 'beacon' });
+  });
+</script>
+</body>
 </html>
 
