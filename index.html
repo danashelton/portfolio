@@ -775,25 +775,31 @@
             <div class="row">
                <div class="col-md-10 offset-md-1">
                   <!-- Contact Form -->
-                <form action="mailto:1danashelton@gmail.com?subject=Hey Dana, your site rocks!" method="post" enctype="text/plain">
+                <form id="contact-form" action="https://formsubmit.co/1danashelton@gmail.com" method="POST">
+                     <input type="hidden" name="_subject" value="New message from your portfolio site">
+                     <input type="hidden" name="_template" value="table">
+                     <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
                      <div class="row">
                         <div class="col-md-6 form-group">
                            <!--name-->
-                           <input type="text" id="name" class="form-control" placeholder="Name" minlength=3 >
+                           <input type="text" id="name" name="name" class="form-control" placeholder="Name" aria-label="Name" minlength=2 required>
                         </div>
                         <div class="col-md-6 form-group">
                            <!--email-->
-                           <input type="email" id="email"  class="form-control" placeholder="Email" >
+                           <input type="email" id="email" name="email" class="form-control" placeholder="Email" aria-label="Email" required>
                         </div>
                         <div class="col-md-12 form-group">
                            <!--message box-->
-                           <textarea id="message"  class="form-control" placeholder="Send me a message" rows=6 ></textarea>
+                           <textarea id="message" name="message" class="form-control" placeholder="Send me a message" aria-label="Message" rows=6 required></textarea>
                         </div>
                         <div class="col-md-12 text-center">
                            <!--contact button-->
-                           <button id="submit" value="Send Message">
+                           <button id="submit" type="submit" value="Send Message">
                            Send Message
                            </button>
+                        </div>
+                        <div class="col-md-12 text-center">
+                           <p id="form-status" role="status" aria-live="polite" style="margin-top:16px;min-height:1.5em;"></p>
                         </div>
                      </div>
                   </form>
@@ -848,7 +854,38 @@
       <script src="assets/js/init.js?v=4"></script>
       <!--Main js-->
       <script src="assets/js/main.js"></script>
-   <!-- Analytics events: resume downloads and contact form sends -->
+   <!-- Contact form: send via FormSubmit without leaving the page -->
+<script>
+  (function () {
+    var form = document.getElementById('contact-form');
+    if (!form || !window.fetch) return;
+    var btn = document.getElementById('submit');
+    var status = document.getElementById('form-status');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.elements['_honey'].value) return;
+      btn.disabled = true; btn.textContent = 'Sending...'; status.textContent = '';
+      fetch('https://formsubmit.co/ajax/1danashelton@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: form.elements['name'].value, email: form.elements['email'].value, message: form.elements['message'].value,
+          _subject: 'New message from your portfolio site', _template: 'table', _replyto: form.elements['email'].value
+        })
+      }).then(function (r) { return r.json(); }).then(function (d) {
+        if (String(d.success) !== 'true') throw new Error(d.message || 'failed');
+        form.reset(); btn.textContent = 'Sent!';
+        status.textContent = 'Thanks! Your message is on its way. I\u2019ll get back to you soon.';
+        if (window.gtag) gtag('event', 'contact_form_success');
+        setTimeout(function () { btn.disabled = false; btn.textContent = 'Send Message'; }, 4000);
+      }).catch(function () {
+        btn.disabled = false; btn.textContent = 'Send Message';
+        status.innerHTML = 'Sorry, that didn\u2019t go through. Please email me at <a href="mailto:1danashelton@gmail.com">1danashelton@gmail.com</a>.';
+      });
+    });
+  })();
+</script>
+<!-- Analytics events: resume downloads and contact form sends -->
 <script>
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href*="Resume"][href$=".pdf"]');
